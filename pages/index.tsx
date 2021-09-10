@@ -18,7 +18,7 @@ const IndexPage = () => {
   const formBackground = useColorModeValue("gray.100", "gray.800");
   return (
     <Flex
-      mt={"10%"}
+      pt={"10%"}
       height="100vh"
       alignItems="center"
       flexDirection="column"
