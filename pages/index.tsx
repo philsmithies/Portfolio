@@ -2,6 +2,7 @@ import {
   Button,
   Flex,
   Box,
+  Spacer,
   Heading,
   useColorMode,
   useColorModeValue,
@@ -10,6 +11,7 @@ import {
 import Head from "next/head";
 import Intro from "../components/Intro";
 import About from "../components/About";
+import Contact from "../components/Contact";
 
 const IndexPage = () => {
   const { toggleColorMode } = useColorMode();
@@ -17,7 +19,7 @@ const IndexPage = () => {
   return (
     <Flex
       mt={"10%"}
-      height="85vh"
+      height="100vh"
       alignItems="center"
       flexDirection="column"
       background={formBackground}
@@ -29,6 +31,7 @@ const IndexPage = () => {
       <Box maxWidth="1200px">
         <Intro />
         <About />
+        <Contact />
       </Box>
     </Flex>
   );

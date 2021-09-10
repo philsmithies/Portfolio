@@ -1,8 +1,16 @@
+import { Flex, Heading } from "@chakra-ui/layout";
+import ContactButtonBar from "./ContactButtonBar";
+
 const Contact = () => {
   return (
-    <div>
-      <p>Contact</p>
-    </div>
+    <Flex alignItems="center" flexDirection="column" mt={200}>
+      <Heading>Get in touch.</Heading>
+      <p>
+        Full Stack Developer looking for roles in React and other Javascript
+        frameworks.
+      </p>
+      <ContactButtonBar />
+    </Flex>
   );
 };
 
