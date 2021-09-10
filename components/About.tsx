@@ -29,7 +29,7 @@ const About = () => {
         <br />
         <p>
           I'm a Pho officiando and have been trying to perfect my own recipe
-          since visiting Vietnam in 2017. 🍜{" "}
+          since visiting Vietnam in 2017. 🍜
         </p>
       </Box>
       <Box className={styles.profilePhoto}>

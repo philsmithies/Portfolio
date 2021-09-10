@@ -1,9 +1,12 @@
 import { Flex } from "@chakra-ui/layout";
-import { Link } from "@chakra-ui/react";
+import { Link, useColorModeValue, useColorMode } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import { IconButton } from "@chakra-ui/button";
 
 const Footer = () => {
+  const { toggleColorMode } = useColorMode();
+  const buttonColor = useColorModeValue("white", "black");
+  const backgroundColor = useColorModeValue("white", "gray.900");
   return (
     <Flex
       pt={5}
@@ -11,13 +14,21 @@ const Footer = () => {
       direction="column"
       justifyContent="center"
       alignItems="center"
+      backgroundColor={backgroundColor}
     >
-      <p>
-        Developed by Phil Smithies.{" "}
-        <Link href="http://www.github.com/philsmithies">
-          <IconButton aria-label="Github" size="sm" icon={<FaGithub />} />
-        </Link>
-      </p>
+      <Flex justifyContent="center" alignItems="center" pb={1}>
+        <p>
+          Developed by Phil Smithies.{" "}
+          <Link href="http://www.github.com/philsmithies">
+            <IconButton
+              backgroundColor={backgroundColor}
+              aria-label="Github"
+              size="sm"
+              icon={<FaGithub />}
+            />
+          </Link>
+        </p>
+      </Flex>
       <p>
         Built with{" "}
         <Link color="#1EA1A0" href="https://nextjs.org/">

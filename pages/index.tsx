@@ -13,7 +13,7 @@ import About from "../components/About";
 
 const IndexPage = () => {
   const { toggleColorMode } = useColorMode();
-  const formBackground = useColorModeValue("gray.100", "gray.700");
+  const formBackground = useColorModeValue("gray.100", "gray.800");
   return (
     <Flex
       height="100vh"

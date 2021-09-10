@@ -11,9 +11,9 @@ import {
 const Navbar = () => {
   const { toggleColorMode } = useColorMode();
   const fontColor = useColorModeValue("black", "white");
-
+  const backgroundColor = useColorModeValue("white", "gray.900");
   return (
-    <Flex>
+    <Flex backgroundColor={backgroundColor}>
       <Box p="4">
         <Heading color={fontColor} ml="6">
           P
@@ -22,7 +22,7 @@ const Navbar = () => {
       <Spacer />
       <Box p="4" mr="5">
         <Button mr="5">Home</Button>
-        <Button mr="5">Projects</Button>
+        {/* <Button mr="5">Projects</Button> */}
         <Button onClick={toggleColorMode}>Toggle Night Mode</Button>
       </Box>
     </Flex>
