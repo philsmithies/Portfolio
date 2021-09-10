@@ -8,6 +8,7 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
+import ButtonBar from "./ButtonBar";
 
 const Intro = () => {
   const { toggleColorMode } = useColorMode();
@@ -17,21 +18,26 @@ const Intro = () => {
   return (
     <Flex p={12} rounded={6} flexDirection={"column"}>
       <Heading color="#1EA1A0" mb={1} as="h3" size="lg">
-        Hi there!, I'm-
+        Hi there! I am-
       </Heading>
-      <Heading as="h1" mb={2} size="4xl">
+      <Heading as="h1" mb={2} fontSize="90px">
         Phil Smithies.
       </Heading>
       <Text fontSize="2xl">
         Full Stack Web Developer.{" "}
         <Text color={fontColor}>
-          Specialising in building clean, and engaging applications on the web.
+          Specializing in building clean, and engaging applications on the web.
         </Text>
       </Text>
       <br />
-      <Text fontSize="2xl">🚀 Currently working on this portfolio....</Text>
+      <Text color={fontColor} fontSize="large">
+        🚀 Currently working on this portfolio....
+      </Text>
       <br />
-      <Text fontSize="2xl">🌱 Makers Academy Alumni</Text>
+      <Text color={fontColor} fontSize="large">
+        🌱 Makers Academy Alumni
+      </Text>
+      <ButtonBar />
     </Flex>
   );
 };

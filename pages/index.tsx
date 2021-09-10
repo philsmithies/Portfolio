@@ -6,6 +6,8 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
+import Head from "next/head";
+
 import Intro from "../components/Intro";
 
 const IndexPage = () => {
@@ -18,6 +20,10 @@ const IndexPage = () => {
       justifyContent="center"
       background={formBackground}
     >
+      <Head>
+        <title>Phil Smithies: Dev</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Intro />
     </Flex>
   );

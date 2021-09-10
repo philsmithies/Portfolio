@@ -16,7 +16,7 @@ const Navbar = () => {
     <Flex>
       <Box p="4">
         <Heading color={fontColor} ml="6">
-          "P"
+          P
         </Heading>
       </Box>
       <Spacer />
