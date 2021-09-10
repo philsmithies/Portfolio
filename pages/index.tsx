@@ -1,14 +1,15 @@
 import {
   Button,
   Flex,
+  Box,
   Heading,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
 
 import Head from "next/head";
-
 import Intro from "../components/Intro";
+import About from "../components/About";
 
 const IndexPage = () => {
   const { toggleColorMode } = useColorMode();
@@ -18,13 +19,17 @@ const IndexPage = () => {
       height="100vh"
       alignItems="center"
       justifyContent="center"
+      flexDirection="column"
       background={formBackground}
     >
       <Head>
         <title>Phil Smithies: Dev</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Intro />
+      <Box maxWidth="1200px">
+        <Intro />
+        <About />
+      </Box>
     </Flex>
   );
 };

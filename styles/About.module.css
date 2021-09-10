@@ -1,0 +1,12 @@
+.profilePhoto {
+  max-width: 300px;
+}
+
+.profilePhoto img {
+  border-radius: 50%;
+}
+
+.profileText {
+  max-width: 600px;
+  padding-right: 3em;
+}

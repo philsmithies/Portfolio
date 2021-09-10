@@ -16,7 +16,7 @@ const Intro = () => {
   const fontColor = useColorModeValue("grey", "white");
 
   return (
-    <Flex p={12} rounded={6} flexDirection={"column"}>
+    <Flex pb={12} rounded={6} flexDirection={"column"}>
       <Heading color="#1EA1A0" mb={1} as="h3" size="lg">
         Hi there! I am-
       </Heading>
