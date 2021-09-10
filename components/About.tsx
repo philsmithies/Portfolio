@@ -16,20 +16,21 @@ const About = () => {
           📣 About Me
         </Heading>
         <p>
-          Hey! I'm Phil Smithies, I've been interested in computers since I was
-          small. I love building web applications and bringing my ideas into a
-          full fledged product.
+          Hey! I&apos;m Phil Smithies, I&apos;ve been interested in computers
+          since I was small. I love building web applications and bringing my
+          ideas into a full fledged product.
         </p>
         <br />
         <p>
-          I program multiple languages, and have just graduated from Makers
-          Academy - a selective full stack bootcamp. I'm interested in building
-          applications in and not limited to React, Javascript, Ruby, HTML, CSS.
+          I program multiple languages, and have just graduated from{" "}
+          <b>Makers Academy</b> - a selective full stack bootcamp. I&apos;m
+          interested in building applications in and not limited to <b>React</b>
+          , <b>Javascript</b>, Ruby, HTML, CSS.
         </p>
         <br />
         <p>
-          I'm a Pho officiando and have been trying to perfect my own recipe
-          since visiting Vietnam in 2017. 🍜
+          I&apos;m a Pho officiando and have been trying to perfect my own
+          recipe since visiting Vietnam in 2017. 🍜
         </p>
       </Box>
       <Box className={styles.profilePhoto}>
