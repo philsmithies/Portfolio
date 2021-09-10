@@ -9,11 +9,11 @@ const About = () => {
       alignItems="center"
       justifyContent="center"
       flexDirection="row"
-      mt={20}
+      mt={10}
     >
       <Box mr={10} className={styles.profileText}>
         <Heading as="h3" mb={5}>
-          📣 About Me
+          About Me
         </Heading>
         <p>
           Hey! I&apos;m Phil Smithies, I&apos;ve been interested in computers

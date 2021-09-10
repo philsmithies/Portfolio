@@ -19,7 +19,6 @@ const IndexPage = () => {
   return (
     <Flex
       pt={"10%"}
-      height="100vh"
       alignItems="center"
       flexDirection="column"
       background={formBackground}
@@ -28,7 +27,7 @@ const IndexPage = () => {
         <title>Phil Smithies: Dev</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Box maxWidth="1200px">
+      <Box maxWidth="1200px" mb={"15%"}>
         <Intro />
         <About />
         <Contact />

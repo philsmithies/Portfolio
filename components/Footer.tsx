@@ -11,12 +11,15 @@ const Footer = () => {
     <Flex
       pt={5}
       pb={5}
+      bottom={0}
+      width="100%"
+      position="absolute"
       direction="column"
       justifyContent="center"
       alignItems="center"
       backgroundColor={backgroundColor}
     >
-      <Flex justifyContent="center" alignItems="center" pb={1}>
+      <Flex justifyContent="center" alignItems="center">
         <p>
           Developed by Phil Smithies.{" "}
           <Link href="http://www.github.com/philsmithies">
