@@ -22,6 +22,7 @@ const Navbar = () => {
       <Spacer />
       <Box p="4" mr="5">
         <Button mr="5">Home</Button>
+        <Button mr="5">Projects</Button>
         {/* <Button mr="5">Projects</Button> */}
         <Button onClick={toggleColorMode}>Toggle Night Mode</Button>
       </Box>
