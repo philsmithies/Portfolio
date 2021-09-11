@@ -19,6 +19,7 @@ const Projects = () => {
       pt={"5%"}
       minHeight="100vh"
       alignItems="center"
+      justifyContent="center"
       flexDirection="column"
       mb="15%"
       background={formBackground}
