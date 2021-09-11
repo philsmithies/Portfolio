@@ -16,14 +16,16 @@ export default function AirbnbExample(props) {
   const backgroundColor = useColorModeValue("white", "gray.800");
 
   return (
-    <Box maxW="m" borderWidth="1px" borderRadius="lg" overflow="hidden" mt={5}>
-      <Image
-        maxH="195"
-        width="100%"
-        object-fit="cover"
-        src={props.imageUrl}
-        alt={props.imageAlt}
-      />
+    <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" mt={5}>
+      <Link href={props.link}>
+        <Image
+          maxH="195"
+          width="100%"
+          object-fit="cover"
+          src={props.imageUrl}
+          alt={props.imageAlt}
+        />
+      </Link>
       <Box p="5">
         <Box fontWeight="semibold" as="h4" lineHeight="tight">
           <Flex alignItems="center">
@@ -47,15 +49,21 @@ export default function AirbnbExample(props) {
             </Link>
           </Flex>
         </Box>
-        <Badge fontSize="0.8em" colorScheme="green">
-          React
-        </Badge>
-        <Badge ml="1" fontSize="0.8em" colorScheme="red">
-          Javascript
-        </Badge>
-        <Badge ml="1" fontSize="0.8em" colorScheme="orange">
-          Node.JS
-        </Badge>
+        {props.react && (
+          <Badge fontSize="0.8em" colorScheme="green">
+            React
+          </Badge>
+        )}
+        {props.javascript && (
+          <Badge ml="1" fontSize="0.8em" colorScheme="red">
+            Javascript
+          </Badge>
+        )}
+        {props.node && (
+          <Badge ml="1" fontSize="0.8em" colorScheme="orange">
+            Node.JS
+          </Badge>
+        )}
         <Box mt={2}>{props.body}</Box>
       </Box>
     </Box>

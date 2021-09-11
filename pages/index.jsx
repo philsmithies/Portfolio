@@ -29,10 +29,10 @@ const IndexPage = () => {
         <title>Phil Smithies: Dev</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Box maxWidth="1200px" mb={"15%"}>
+      <Box maxWidth="1200px" mb={"20%"}>
         <Intro />
         <About />
-        <Flex justifyContent="center" mt={20}>
+        <Flex justifyContent="center" mt={"20%"} mb="15%">
           <Flex direction="column" pt={10}>
             <Box alignSelf="flex-start">
               <Heading>View my projects</Heading>
@@ -45,6 +45,9 @@ const IndexPage = () => {
                 title={"Shuttr"}
                 body={"A Photo Sharing and Location Discovery Application"}
                 link={"https://www.github.com/philsmithies/shuttr"}
+                react={true}
+                javascript={true}
+                node={true}
               />
             </Box>
           </Flex>
@@ -55,16 +58,18 @@ const IndexPage = () => {
               title={"Chitter"}
               body={"A Social Media Clone"}
               link={"https://www.github.com/philsmithies/chitter-react"}
-            />
-            <Card
-              imageUrl={"./cv_generator.png"}
-              imageAlt={"asda - A Photo Location Discovery Application"}
-              title={"CV Generator"}
-              body={"A Photo Sharing and Location Discovery Application"}
-              link={"https://www.github.com/philsmithies/shuttr"}
               react={true}
               javascript={true}
               node={true}
+            />
+            <Card
+              imageUrl={"./cv_generator.png"}
+              imageAlt={"CV Generator - A CV Generator in React"}
+              title={"CV Generator"}
+              body={"A dynamic CV Generator written in React"}
+              link={"https://github.com/philsmithies/cv-generator/"}
+              react={true}
+              javascript={true}
             />
           </Box>
         </Flex>
