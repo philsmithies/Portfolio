@@ -31,11 +31,12 @@ const Intro = () => {
       </Text>
       <br />
       <Text color={fontColor} fontSize="large">
-        🚀 &amp; Currently working on this portfolio....
+        → &nbsp;Currently building a <strong>language learning</strong>{" "}
+        application in React Native.
       </Text>
       <br />
       <Text color={fontColor} fontSize="large">
-        🌱 Makers Academy Alumni
+        → &nbsp;Makers Academy Alumni
       </Text>
       <ButtonBar />
     </Flex>

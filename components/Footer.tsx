@@ -22,17 +22,22 @@ const Footer = () => {
         backgroundColor={backgroundColor}
       >
         <Flex justifyContent="center" alignItems="center">
-          <p>
-            Developed by Phil Smithies.{" "}
-            <Link href="http://www.github.com/philsmithies">
-              <IconButton
-                backgroundColor={backgroundColor}
-                aria-label="Github"
-                size="sm"
-                icon={<FaGithub />}
-              />
-            </Link>
-          </p>
+          Developed by&nbsp;
+          <Link color="#1EA1A0" href="https://github.com/philsmithies">
+            Phil Smithies
+          </Link>
+          <Link href="http://www.github.com/philsmithies">
+            <IconButton
+              backgroundColor={backgroundColor}
+              aria-label="Github"
+              size="sm"
+              _hover={{
+                cursor: "pointer",
+                color: "teal.300",
+              }}
+              icon={<FaGithub />}
+            />
+          </Link>
         </Flex>
         <p>
           Built with{" "}
