@@ -20,10 +20,10 @@ const Projects = () => {
       minHeight="100vh"
       alignItems="center"
       flexDirection="column"
+      mb="15%"
       background={formBackground}
-      mb="100"
     >
-      <Grid templateColumns="repeat(2, 2fr)" templateRows="1fr" gap={10}>
+      <Grid templateColumns="repeat(2, 420px)" templateRows="400px" gap={5}>
         <Head>
           <title>Projects</title>
           <meta

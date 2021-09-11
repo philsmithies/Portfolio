@@ -55,6 +55,7 @@ const IndexPage = () => {
                 react={true}
                 javascript={true}
                 node={true}
+                size={"sm"}
               />
             </Box>
           </Flex>
@@ -68,6 +69,7 @@ const IndexPage = () => {
               react={true}
               javascript={true}
               node={true}
+              size={"sm"}
             />
             <Card
               imageUrl={"./cv_generator.png"}
@@ -77,6 +79,7 @@ const IndexPage = () => {
               link={"https://github.com/philsmithies/cv-generator/"}
               react={true}
               javascript={true}
+              size={"sm"}
             />
           </Box>
         </Flex>

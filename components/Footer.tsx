@@ -44,7 +44,7 @@ const Footer = () => {
             Chakra UI
           </Link>
           . Hosted on{" "}
-          <Link color="teal.300" href="https://vercel.com/">
+          <Link color="#1EA1A0" href="https://vercel.com/">
             Vercel
           </Link>
           .

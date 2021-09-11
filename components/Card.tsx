@@ -16,7 +16,7 @@ export default function Card(props) {
 
   return (
     <Box
-      maxW="450"
+      maxW={props.size || "lg"}
       borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
@@ -24,9 +24,10 @@ export default function Card(props) {
     >
       <Link href={props.link}>
         <Image
-          height="195px"
+          margin={"0 auto"}
+          maxHeight={250}
+          height="auto"
           width="100%"
-          object-fit="cover"
           src={props.imageUrl}
           alt={props.imageAlt}
         />
