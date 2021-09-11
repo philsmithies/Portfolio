@@ -17,7 +17,7 @@ const Intro = () => {
 
   return (
     <Flex pb={12} rounded={6} flexDirection={"column"}>
-      <Heading color="#1EA1A0" mb={1} as="h3" size="lg">
+      <Heading color="teal.300" mb={1} as="h3" size="lg">
         Hi there! I am-
       </Heading>
       <Heading as="h1" mb={2} fontSize="90px">
@@ -31,7 +31,7 @@ const Intro = () => {
       </Text>
       <br />
       <Text color={fontColor} fontSize="large">
-        🚀 Currently working on this portfolio....
+        🚀 &amp; Currently working on this portfolio....
       </Text>
       <br />
       <Text color={fontColor} fontSize="large">
