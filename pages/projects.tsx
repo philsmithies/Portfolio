@@ -24,7 +24,7 @@ const Projects = () => {
       mb="15%"
       background={formBackground}
     >
-      <Grid templateColumns="repeat(2, 420px)" templateRows="400px" gap={5}>
+      <Grid templateColumns="repeat(2, 420px)" templateRows="420px" gap={5}>
         <Head>
           <title>Projects</title>
           <meta
@@ -32,8 +32,8 @@ const Projects = () => {
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
-        <Flex justifyContent="center" alignItems="center">
-          <Heading>My Projects</Heading>
+        <Flex maxHeight="420px" justifyContent="center" alignItems="center">
+          <Heading color="teal.100">My Projects</Heading>
         </Flex>
         <Card
           imageUrl={"./preview_map.png"}
