@@ -4,11 +4,13 @@ import {
   Box,
   Spacer,
   Heading,
+  Link,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
 
 import Head from "next/head";
+// import Link from "next/link";
 import Intro from "../components/Intro";
 import About from "../components/About";
 import Contact from "../components/Contact";
@@ -36,7 +38,12 @@ const IndexPage = () => {
           <Flex direction="column" pt={10}>
             <Box alignSelf="flex-start">
               <Heading>View my projects</Heading>
-              <p>All of my projects can be seen here</p>
+              <p>
+                All of my projects can be seen{" "}
+                <Link color={"teal.400"} href="/projects">
+                  here
+                </Link>
+              </p>
             </Box>
             <Box mt={10}>
               <Card

@@ -19,7 +19,9 @@ export default function AirbnbExample(props) {
     <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" mt={5}>
       <Link href={props.link}>
         <Image
-          maxH="195"
+          height="100%"
+          maxHeight="195px"
+          overflow="hidden"
           width="100%"
           object-fit="cover"
           src={props.imageUrl}
@@ -52,6 +54,11 @@ export default function AirbnbExample(props) {
         {props.react && (
           <Badge fontSize="0.8em" colorScheme="green">
             React
+          </Badge>
+        )}
+        {props.ruby && (
+          <Badge ml="1" fontSize="0.8em" colorScheme="pink">
+            Ruby on Rails
           </Badge>
         )}
         {props.javascript && (

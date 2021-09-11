@@ -17,9 +17,18 @@ const Navbar = () => {
   return (
     <Flex backgroundColor={backgroundColor}>
       <Box p="4">
-        <Heading color={fontColor} ml="6">
-          P
-        </Heading>
+        <Link href="/" passHref>
+          <Heading
+            _hover={{
+              cursor: "pointer",
+              color: "teal.300",
+            }}
+            color={fontColor}
+            ml="6"
+          >
+            P
+          </Heading>
+        </Link>
       </Box>
       <Spacer />
       <Box p="4" mr="5">

@@ -3,7 +3,7 @@ import ContactButtonBar from "./ContactButtonBar";
 
 const Contact = () => {
   return (
-    <Flex alignItems="center" flexDirection="column" pt={"11%"}>
+    <Flex alignItems="center" flexDirection="column" pt={"5%"}>
       <Flex
         justifyContent="center"
         alignItems="center"
@@ -13,7 +13,7 @@ const Contact = () => {
         borderColor="white"
         borderRadius="10px"
       >
-        <Heading>Get in touch.</Heading>
+        <Heading pb={5}>Get in touch.</Heading>
         <p>
           Full Stack Developer looking for roles in React and other Javascript
           frameworks.

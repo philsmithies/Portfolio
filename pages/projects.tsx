@@ -3,6 +3,7 @@ import {
   Flex,
   Box,
   Spacer,
+  Grid,
   Heading,
   useColorMode,
   useColorModeValue,
@@ -16,17 +17,23 @@ const Projects = () => {
   return (
     <Flex
       pt={"5%"}
+      minHeight="100vh"
       alignItems="center"
       flexDirection="column"
       background={formBackground}
+      mb="100"
     >
-      <Head>
-        <title>Projects</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
-      <Heading>My Projects</Heading>
-
-      <Box mt={10}>
+      <Grid templateColumns="repeat(2, 2fr)" templateRows="1fr" gap={10}>
+        <Head>
+          <title>Projects</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+        </Head>
+        <Flex justifyContent="center" alignItems="center">
+          <Heading>My Projects</Heading>
+        </Flex>
         <Card
           imageUrl={"./preview_map.png"}
           imageAlt={"Shuttr - A Photo Location Discovery Application"}
@@ -37,8 +44,7 @@ const Projects = () => {
           javascript={true}
           node={true}
         />
-      </Box>
-      <Box ml={6} mb={"10%"}>
+
         <Card
           imageUrl="./chitter.png"
           imageAlt={"Chitter - A Twitter Clone"}
@@ -58,7 +64,26 @@ const Projects = () => {
           react={true}
           javascript={true}
         />
-      </Box>
+        <Card
+          imageUrl={"./bookface.jpg"}
+          imageAlt={"Bookface"}
+          title={"Bookface"}
+          body={
+            "A full-stack web app inspired by the functionality of Facebook."
+          }
+          link={"https://github.com/philsmithies/acebook-team-smiley-face"}
+          ruby={true}
+          javascript={true}
+        />
+        <Card
+          imageUrl={"./tictactoe.png"}
+          imageAlt={"Tic Tac Toe"}
+          title={"Tic Tac Toe"}
+          body={"TDD Game of the coding students favourite."}
+          link={"https://github.com/philsmithies/tictactoe/"}
+          javascript={true}
+        />
+      </Grid>
     </Flex>
   );
 };
