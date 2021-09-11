@@ -1,4 +1,3 @@
-// Sample card from Airbnb
 import {
   Box,
   Flex,
@@ -12,16 +11,20 @@ import { Link } from "@chakra-ui/layout";
 import { FaGithub } from "react-icons/fa";
 import { MdLaunch } from "react-icons/md";
 
-export default function AirbnbExample(props) {
+export default function Card(props) {
   const backgroundColor = useColorModeValue("white", "gray.800");
 
   return (
-    <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" mt={5}>
+    <Box
+      maxW="450"
+      borderWidth="1px"
+      borderRadius="lg"
+      overflow="hidden"
+      mt={5}
+    >
       <Link href={props.link}>
         <Image
-          height="100%"
-          maxHeight="195px"
-          overflow="hidden"
+          height="195px"
           width="100%"
           object-fit="cover"
           src={props.imageUrl}
@@ -57,12 +60,16 @@ export default function AirbnbExample(props) {
           </Badge>
         )}
         {props.ruby && (
-          <Badge ml="1" fontSize="0.8em" colorScheme="pink">
+          <Badge fontSize="0.8em" colorScheme="pink">
             Ruby on Rails
           </Badge>
         )}
         {props.javascript && (
-          <Badge ml="1" fontSize="0.8em" colorScheme="red">
+          <Badge
+            ml={props.react || props.ruby ? 1 : ""}
+            fontSize="0.8em"
+            colorScheme="red"
+          >
             Javascript
           </Badge>
         )}
