@@ -7,11 +7,13 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 const Navbar = () => {
   const { toggleColorMode } = useColorMode();
   const fontColor = useColorModeValue("black", "white");
   const backgroundColor = useColorModeValue("white", "gray.900");
+
   return (
     <Flex backgroundColor={backgroundColor}>
       <Box p="4">
@@ -21,10 +23,13 @@ const Navbar = () => {
       </Box>
       <Spacer />
       <Box p="4" mr="5">
-        <Button mr="5">Home</Button>
-        <Button mr="5">Projects</Button>
+        <Link href="/" passHref>
+          <Button mr="5">Home</Button>
+        </Link>
+        <Link href="/projects" passHref>
+          <Button>Projects</Button>
+        </Link>
         {/* <Button mr="5">Projects</Button> */}
-        <Button onClick={toggleColorMode}>Toggle Night Mode</Button>
       </Box>
     </Flex>
   );
