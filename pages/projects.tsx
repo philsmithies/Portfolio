@@ -16,7 +16,7 @@ const Projects = () => {
   const formBackground = useColorModeValue("gray.100", "gray.800");
   return (
     <Flex
-      pt={"10%"}
+      pt={"5%"}
       minHeight="100vh"
       alignItems="center"
       justifyContent="center"
