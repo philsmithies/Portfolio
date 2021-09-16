@@ -10,9 +10,9 @@ import {
 import Link from "next/link";
 
 const Navbar = () => {
-  const { toggleColorMode } = useColorMode();
-  const fontColor = useColorModeValue("black", "white");
-  const backgroundColor = useColorModeValue("white", "gray.900");
+  // const { toggleColorMode } = useColorMode();
+  // const fontColor = useColorModeValue("black", "white");
+  // const backgroundColor = useColorModeValue("white", "gray.900");
 
   return (
     <Flex backgroundColor={"gray.900"}>
