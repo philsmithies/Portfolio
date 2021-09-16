@@ -14,6 +14,21 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/index.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/index.jsx",
+    "components/Navbar.jsx",
+    "components/Layout.jsx",
+    "components/Intro.jsx",
+    "components/Footer.jsx",
+    "components/ContactButtonBar.jsx",
+    "components/Contact.jsx",
+    "components/Card.jsx",
+    "components/ButtonBar.jsx",
+    "components/About.jsx",
+    "pages/projects.jsx"
+  ],
   "exclude": ["node_modules"]
 }
