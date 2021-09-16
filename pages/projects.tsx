@@ -1,8 +1,5 @@
 import {
-  Button,
   Flex,
-  Box,
-  Spacer,
   Grid,
   Heading,
   useColorMode,
@@ -37,8 +34,12 @@ const Projects = () => {
           md: "repeat(1, 430px)",
           lg: "repeat(2, 380px)",
         }}
-        templateRows={{ sm: "200px", md: "250px" }}
-        gap={5}
+        templateRows={{
+          sm: "200px",
+          md: "repeat(3, 400px)",
+          lg: "repeat(3, 430px)",
+        }}
+        gap={6}
       >
         <Head>
           <title>Projects</title>
@@ -47,7 +48,7 @@ const Projects = () => {
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
-        <Flex maxHeight="420px" justifyContent="center" alignItems="center">
+        <Flex justifyContent="center" alignItems="center">
           <Heading color="teal.100">My Projects</Heading>
         </Flex>
         <Card

@@ -43,7 +43,7 @@ const IndexPage = () => {
       <Box width={{ sm: "380px", md: "600px", lg: "850px" }} mb={"20%"}>
         <Intro />
         <About />
-        <Flex justifyContent="center" mt={"20%"} mb="15%">
+        <Flex justifyContent="center" mt={"10%"} mb="15%">
           <Flex direction="column" pt={10}>
             <Box alignSelf="flex-start" pr="2">
               <Heading
