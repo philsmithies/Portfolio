@@ -27,7 +27,7 @@ const ButtonBar = () => {
         rel="noopener noreferrer"
       >
         <Button
-          backgroundColor={backgroundColor}
+          backgroundColor={"gray.900"}
           leftIcon={<FaGithub />}
           variant="solid"
         >
@@ -40,7 +40,7 @@ const ButtonBar = () => {
         href="https://www.linkedin.com/in/phil-smithies/"
       >
         <Button
-          backgroundColor={backgroundColor}
+          backgroundColor={"gray.900"}
           leftIcon={<FaLinkedin />}
           variant="solid"
         >
@@ -49,7 +49,7 @@ const ButtonBar = () => {
       </Link>
       <Link href="mailto:philsmithies@gmail.com">
         <Button
-          backgroundColor={backgroundColor}
+          backgroundColor={"gray.900"}
           leftIcon={<FaEnvelope />}
           variant="solid"
         >

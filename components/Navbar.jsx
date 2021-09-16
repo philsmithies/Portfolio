@@ -15,7 +15,7 @@ const Navbar = () => {
   const backgroundColor = useColorModeValue("white", "gray.900");
 
   return (
-    <Flex backgroundColor={backgroundColor}>
+    <Flex backgroundColor={"gray.900"}>
       <Box p="4">
         <Link href="/" passHref>
           <Heading
@@ -23,7 +23,7 @@ const Navbar = () => {
               cursor: "pointer",
               color: "teal.300",
             }}
-            color={fontColor}
+            color={"white"}
             ml="6"
           >
             P
