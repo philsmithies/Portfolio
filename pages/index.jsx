@@ -21,8 +21,8 @@ import chitterImg from "../public/chitter.png";
 
 const IndexPage = () => {
   const breakpoints = createBreakpoints({
-    sm: "300px",
-    md: "600px",
+    sm: "380px",
+    md: "500px",
     lg: "850px",
     xl: "1048px",
     "2xl": "1200px",
@@ -40,17 +40,14 @@ const IndexPage = () => {
         <title>Phil Smithies: Dev</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Box
-        width={{ sm: "300px", md: "600px", lg: "850px", xl: "1000px" }}
-        mb={"20%"}
-      >
+      <Box width={{ sm: "380px", md: "600px", lg: "850px" }} mb={"20%"}>
         <Intro />
         <About />
         <Flex justifyContent="center" mt={"20%"} mb="15%">
           <Flex direction="column" pt={10}>
             <Box alignSelf="flex-start">
               <Heading
-                fontSize={{ sm: "24px", md: "40px", lg: "52px" }}
+                fontSize={{ sm: "24px", md: "28px", lg: "48px" }}
                 mr={{ lg: 10 }}
               >
                 View my projects
@@ -76,7 +73,7 @@ const IndexPage = () => {
               />
             </Box>
           </Flex>
-          <Box ml={6}>
+          <Box ml={{ sm: 4, md: 6, lg: 1 }}>
             <Card
               imageUrl="./chitter.png"
               imageAlt={"Chitter - A Twitter Clone"}

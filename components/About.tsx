@@ -3,15 +3,25 @@ import profileImage from "../public/profileImage.jpg";
 import Image from "next/image";
 import styles from "../styles/About.module.css";
 
+import { createBreakpoints } from "@chakra-ui/theme-tools";
+
 const About = () => {
+  const breakpoints = createBreakpoints({
+    sm: "300px",
+    md: "600px",
+    lg: "850px",
+    xl: "1048px",
+    "2xl": "1200px",
+  });
+
   return (
     <Flex
       alignItems="center"
       justifyContent="center"
-      flexDirection="row"
+      flexDirection={{ sm: "column", md: "row" }}
       mt={10}
     >
-      <Box mr={10} className={styles.profileText}>
+      <Box mr={10} className={styles.profileText} pb={{ sm: 8 }}>
         <Heading as="h3" mb={5}>
           About Me
         </Heading>
