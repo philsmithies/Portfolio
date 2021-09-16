@@ -1,4 +1,4 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import profileImage from "../public/profileImage.jpg";
 import Image from "next/image";
 import styles from "../styles/About.module.css";
@@ -18,11 +18,12 @@ const About = () => {
     <Flex
       alignItems="center"
       justifyContent="center"
-      flexDirection={{ sm: "column", md: "row" }}
+      flexDirection={{ sm: "column", lg: "row" }}
       mt={10}
+      mr={{ md: 5 }}
     >
       <Box
-        mr={{ sm: 0, md: 5, lg: 10 }}
+        mr={{ sm: 0, md: 2, lg: 10 }}
         className={styles.profileText}
         pb={{ sm: "4em" }}
         textAlign={{ sm: "center", md: "left" }}
@@ -30,28 +31,25 @@ const About = () => {
         <Heading as="h3" mb={5}>
           About Me
         </Heading>
-        <p>
+        <Text fontSize={{ sm: "1.2em", md: "1.3em" }}>
           Hey! I&apos;m Phil Smithies, I&apos;ve been interested in computers
           since I was small. I love building web applications and bringing my
           ideas into a full fledged product.
-        </p>
+        </Text>
         <br />
-        <p>
+        <Text fontSize={{ sm: "1.2em", md: "1.3em" }}>
           I program multiple languages, and have just graduated from{" "}
           <b>Makers Academy</b> - a selective full stack bootcamp. I&apos;m
           interested in building applications in and not limited to <b>React</b>
           , <b>Javascript</b>, Ruby, HTML, CSS.
-        </p>
+        </Text>
         <br />
-        <p>
+        <Text fontSize={{ sm: "1.2em", md: "1.3em" }}>
           I&apos;m a Pho officiando and have been trying to perfect my own
           recipe since visiting Vietnam in 2017. 🍜
-        </p>
+        </Text>
       </Box>
-      <Box
-        maxWidth={{ sm: 200, md: 220, lg: 300 }}
-        className={styles.profilePhoto}
-      >
+      <Box maxWidth="300px" className={styles.profilePhoto}>
         <Image src={profileImage} alt="Profile photo" />
       </Box>
     </Flex>
