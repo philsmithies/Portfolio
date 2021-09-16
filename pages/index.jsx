@@ -9,6 +9,8 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
+import { createBreakpoints } from "@chakra-ui/theme-tools";
+
 import Head from "next/head";
 // import Link from "next/link";
 import Intro from "../components/Intro";
@@ -18,6 +20,13 @@ import Card from "../components/Card";
 import chitterImg from "../public/chitter.png";
 
 const IndexPage = () => {
+  const breakpoints = createBreakpoints({
+    sm: "300px",
+    md: "600px",
+    lg: "850px",
+    xl: "1048px",
+    "2xl": "1200px",
+  });
   const { toggleColorMode } = useColorMode();
   const formBackground = useColorModeValue("gray.100", "gray.800");
   return (
@@ -31,13 +40,21 @@ const IndexPage = () => {
         <title>Phil Smithies: Dev</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Box maxWidth="1200px" mb={"20%"}>
+      <Box
+        width={{ sm: "300px", md: "600px", lg: "850px", xl: "1000px" }}
+        mb={"20%"}
+      >
         <Intro />
         <About />
         <Flex justifyContent="center" mt={"20%"} mb="15%">
           <Flex direction="column" pt={10}>
             <Box alignSelf="flex-start">
-              <Heading>View my projects</Heading>
+              <Heading
+                fontSize={{ sm: "24px", md: "40px", lg: "52px" }}
+                mr={{ lg: 10 }}
+              >
+                View my projects
+              </Heading>
               <p>
                 All of my projects can be seen{" "}
                 <Link color={"teal.400"} href="/projects">
