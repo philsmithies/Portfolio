@@ -55,17 +55,17 @@ export default function Card(props) {
             </Link>
           </Flex>
         </Box>
-        {props.react && (
+        {props.react && props.size != "sm" && (
           <Badge fontSize="0.8em" colorScheme="green">
             React
           </Badge>
         )}
-        {props.ruby && (
+        {props.ruby && props.size != "sm" && (
           <Badge fontSize="0.8em" colorScheme="pink">
             Ruby on Rails
           </Badge>
         )}
-        {props.javascript && (
+        {props.javascript && props.size != "sm" && (
           <Badge
             ml={props.react || props.ruby ? 1 : ""}
             fontSize="0.8em"
@@ -74,7 +74,7 @@ export default function Card(props) {
             Javascript
           </Badge>
         )}
-        {props.node && (
+        {props.node && props.size != "sm" && (
           <Badge ml="1" fontSize="0.8em" colorScheme="orange">
             Node.JS
           </Badge>

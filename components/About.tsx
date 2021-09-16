@@ -48,7 +48,10 @@ const About = () => {
           recipe since visiting Vietnam in 2017. 🍜
         </p>
       </Box>
-      <Box className={styles.profilePhoto}>
+      <Box
+        maxWidth={{ sm: 200, md: 220, lg: 300 }}
+        className={styles.profilePhoto}
+      >
         <Image src={profileImage} alt="Profile photo" />
       </Box>
     </Flex>

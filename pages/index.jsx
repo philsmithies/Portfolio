@@ -45,7 +45,7 @@ const IndexPage = () => {
         <About />
         <Flex justifyContent="center" mt={"20%"} mb="15%">
           <Flex direction="column" pt={10}>
-            <Box alignSelf="flex-start">
+            <Box alignSelf="flex-start" pr="2">
               <Heading
                 fontSize={{ sm: "24px", md: "28px", lg: "48px" }}
                 mr={{ lg: 10 }}
