@@ -21,7 +21,12 @@ const About = () => {
       flexDirection={{ sm: "column", md: "row" }}
       mt={10}
     >
-      <Box mr={10} className={styles.profileText} pb={{ sm: 8 }}>
+      <Box
+        mr={{ sm: 0, md: 5, lg: 10 }}
+        className={styles.profileText}
+        pb={{ sm: "4em" }}
+        textAlign={{ sm: "center", md: "left" }}
+      >
         <Heading as="h3" mb={5}>
           About Me
         </Heading>
