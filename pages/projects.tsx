@@ -1,8 +1,5 @@
 import {
-  Button,
   Flex,
-  Box,
-  Spacer,
   Grid,
   Heading,
   useColorMode,
@@ -11,9 +8,16 @@ import {
 import Head from "next/head";
 import Intro from "../components/Intro";
 import Card from "../components/Card";
+import { createBreakpoints } from "@chakra-ui/theme-tools";
 
 const Projects = () => {
   const formBackground = useColorModeValue("gray.100", "gray.800");
+  const breakpoints = createBreakpoints({
+    sm: "380px",
+    md: "500px",
+    lg: "850px",
+    xl: "1048px",
+  });
   return (
     <Flex
       pt={"5%"}
@@ -24,7 +28,19 @@ const Projects = () => {
       mb="15%"
       background={formBackground}
     >
-      <Grid templateColumns="repeat(2, 420px)" templateRows="420px" gap={5}>
+      <Grid
+        templateColumns={{
+          sm: "repeat(1, 380px)",
+          md: "repeat(1, 430px)",
+          lg: "repeat(2, 380px)",
+        }}
+        templateRows={{
+          sm: "200px",
+          md: "repeat(3, 400px)",
+          lg: "repeat(3, 430px)",
+        }}
+        gap={6}
+      >
         <Head>
           <title>Projects</title>
           <meta
@@ -32,7 +48,7 @@ const Projects = () => {
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
-        <Flex maxHeight="420px" justifyContent="center" alignItems="center">
+        <Flex justifyContent="center" alignItems="center">
           <Heading color="teal.100">My Projects</Heading>
         </Flex>
         <Card
