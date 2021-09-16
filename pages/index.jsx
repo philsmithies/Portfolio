@@ -28,13 +28,13 @@ const IndexPage = () => {
     "2xl": "1200px",
   });
   const { toggleColorMode } = useColorMode();
-  const formBackground = useColorModeValue("gray.100", "gray.800");
+  // const formBackground = useColorModeValue("gray.100", "gray.800");
   return (
     <Flex
       pt={"5%"}
       alignItems="center"
       flexDirection="column"
-      background={formBackground}
+      background={"gray.800"}
     >
       <Head>
         <title>Phil Smithies: Dev</title>
