@@ -21,7 +21,7 @@ import chitterImg from "../public/chitter.png";
 
 const IndexPage = () => {
   const breakpoints = createBreakpoints({
-    sm: "300px",
+    sm: "320px",
     md: "600px",
     lg: "850px",
     xl: "1048px",
@@ -40,10 +40,7 @@ const IndexPage = () => {
         <title>Phil Smithies: Dev</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Box
-        width={{ sm: "300px", md: "600px", lg: "850px", xl: "1000px" }}
-        mb={"20%"}
-      >
+      <Box width={"70%"} mb={"20%"}>
         <Intro />
         <About />
         <Flex justifyContent="center" mt={"20%"} mb="15%">
