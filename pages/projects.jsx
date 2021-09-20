@@ -1,6 +1,7 @@
 import {
   Flex,
   Grid,
+  Box,
   Heading,
   useColorMode,
   useColorModeValue,
@@ -23,15 +24,7 @@ const Projects = () => {
   const [isSmallerScreen] = useMediaQuery(`(max-width: 380px)`);
 
   return (
-    <Flex
-      pt={!isSmallerScreen ? "10%" : "15%"}
-      pb={!isSmallerScreen ? "15%" : "30%"}
-      alignItems="center"
-      justifyContent="center"
-      flexDirection="column"
-      width="100%"
-      background={formBackground}
-    >
+    <Flex alignItems="center" flexDirection="column" background={"gray.800"}>
       <Grid
         templateColumns={{
           sm: "90%",
@@ -44,6 +37,9 @@ const Projects = () => {
           lg: "repeat(3, 430px)",
         }}
         gap={6}
+        // background={formBackground}
+        pt={!isSmallerScreen ? "10%" : "15%"}
+        pb={!isSmallerScreen ? "20%" : "30%"}
       >
         <Head>
           <title>Projects</title>
@@ -55,6 +51,7 @@ const Projects = () => {
         <Flex justifyContent="center" alignItems="center">
           <Heading color="teal.100">My Projects</Heading>
         </Flex>
+
         <Card
           imageUrl={"./preview_map.png"}
           imageAlt={"Shuttr - A Photo Location Discovery Application"}
