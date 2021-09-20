@@ -21,7 +21,7 @@ const Footer = () => {
         alignItems="center"
         backgroundColor={backgroundColor}
       >
-        <Flex justifyContent="center" alignItems="center">
+        <Flex justifyContent="center" color="white" alignItems="center">
           Developed by&nbsp;
           <Link color="teal.300" href="https://github.com/philsmithies">
             Phil Smithies
@@ -39,7 +39,7 @@ const Footer = () => {
             />
           </Link>
         </Flex>
-        <Text>
+        <Text color="white">
           Built with{" "}
           <Link color="teal.300" href="https://nextjs.org/">
             Next.js
