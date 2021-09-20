@@ -10,7 +10,8 @@ import {
   useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { useMediaQuery } from "@chakra-ui/media-query";
+import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
 
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 
@@ -19,17 +20,18 @@ import Intro from "../components/Intro";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Card from "../components/Card";
-import chitterImg from "../public/chitter.png";
 
 const IndexPage = () => {
+  const isSmallerScreen = useMediaQuery({
+    query: "(max-width:600px)",
+  });
+
   const breakpoints = createBreakpoints({
     sm: "320px",
     md: "600px",
     lg: "850px",
     xl: "1048px",
   });
-
-  const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
   return (
     <Flex
@@ -42,16 +44,12 @@ const IndexPage = () => {
         <title>Phil Smithies: Dev</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Box
-        width={isNotSmallerScreen ? "80%" : "90%"}
-        maxWidth="800px"
-        mb={"20%"}
-      >
+      <Box width={!isSmallerScreen ? "80%" : "90%"} maxWidth="800px" mb={"20%"}>
         <Intro />
         <About />
 
         <Flex
-          direction={isNotSmallerScreen ? "row" : "column"}
+          direction={!isSmallerScreen ? "row" : "column"}
           justifyContent="center"
           alignItems="center"
           mt={"10%"}
@@ -60,7 +58,7 @@ const IndexPage = () => {
           <Flex direction="column" pt={10}>
             <Box alignSelf="flex-start">
               <Heading
-                fontSize={isNotSmallerScreen ? "52px" : "35px"}
+                fontSize={!isSmallerScreen ? "52px" : "35px"}
                 mr={{ sm: 0, lg: 10 }}
               >
                 View my projects
@@ -84,11 +82,11 @@ const IndexPage = () => {
                 react={true}
                 javascript={true}
                 node={true}
-                size={{ sm: "md", lg: "sm" }}
+                size={!isSmallerScreen ? "md" : "sm"}
               />
             </Box>
           </Flex>
-          <Flex direction="column" ml={isNotSmallerScreen ? "1em" : 0}>
+          <Flex direction="column" ml={!isSmallerScreen ? "1em" : 0}>
             <Box>
               <Card
                 imageUrl="./chitter.png"
@@ -101,7 +99,7 @@ const IndexPage = () => {
                 react={true}
                 javascript={true}
                 node={true}
-                size={{ sm: "md", lg: "sm" }}
+                size={!isSmallerScreen ? "md" : "sm"}
               />
             </Box>
             <Box>
@@ -115,7 +113,7 @@ const IndexPage = () => {
                 link={"https://github.com/philsmithies/cv-generator/"}
                 react={true}
                 javascript={true}
-                size={{ sm: "md", lg: "sm" }}
+                size={!isSmallerScreen ? "md" : "sm"}
               />
             </Box>
           </Flex>

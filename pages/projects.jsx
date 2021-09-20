@@ -9,6 +9,7 @@ import Head from "next/head";
 import Intro from "../components/Intro";
 import Card from "../components/Card";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
+import { useMediaQuery } from "react-responsive";
 
 const Projects = () => {
   const formBackground = useColorModeValue("gray.100", "gray.800");
@@ -18,9 +19,14 @@ const Projects = () => {
     lg: "850px",
     xl: "1048px",
   });
+
+  const isSmallerScreen = useMediaQuery({
+    query: "(max-width:600px)",
+  });
+
   return (
     <Flex
-      pt={{ sm: "10%", md: "5%" }}
+      pt={!isSmallerScreen ? "10%" : "15%"}
       pl={"5%"}
       pb={{ sm: "30%", md: "15%" }}
       minHeight="100vh"

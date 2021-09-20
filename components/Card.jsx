@@ -11,14 +11,15 @@ import { Link } from "@chakra-ui/layout";
 import { FaGithub } from "react-icons/fa";
 import { MdLaunch } from "react-icons/md";
 import { useState, useEffect } from "react";
-import { useMediaQuery } from "@chakra-ui/media-query";
-
+import { useMediaQuery } from "react-responsive";
 export default function Card(props) {
   const backgroundColor = useColorModeValue("white", "gray.800");
 
   const [isMobile, setIsMobile] = useState(false);
 
-  const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+  const isSmallerScreen = useMediaQuery({
+    query: "(max-width:600px)",
+  });
 
   return (
     <Box
@@ -61,17 +62,17 @@ export default function Card(props) {
             </Link>
           </Flex>
         </Box>
-        {props.react && !isNotSmallerScreen && (
+        {props.react && !!isSmallerScreen && (
           <Badge fontSize="0.8em" colorScheme="green">
             React
           </Badge>
         )}
-        {props.ruby && !isNotSmallerScreen && (
+        {props.ruby && !!isSmallerScreen && (
           <Badge fontSize="0.8em" colorScheme="pink">
             Ruby on Rails
           </Badge>
         )}
-        {props.javascript && !isNotSmallerScreen && (
+        {props.javascript && !!isSmallerScreen && (
           <Badge
             ml={props.react || props.ruby ? 1 : ""}
             fontSize="0.8em"
@@ -80,7 +81,7 @@ export default function Card(props) {
             Javascript
           </Badge>
         )}
-        {props.node && !isNotSmallerScreen && (
+        {props.node && !!isSmallerScreen && (
           <Badge ml="1" fontSize="0.8em" colorScheme="orange">
             Node.JS
           </Badge>

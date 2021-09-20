@@ -4,7 +4,9 @@ import { useMediaQuery } from "@chakra-ui/media-query";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const ButtonBar = () => {
-  const [isNotSmallerScreen] = useMediaQuery("(min-width:640px)");
+  const isSmallerScreen = useMediaQuery({
+    query: "(max-width:600px)",
+  });
 
   return (
     <Box mt="5">
@@ -38,7 +40,7 @@ const ButtonBar = () => {
       </Link>
       <Link href="mailto:philsmithies@gmail.com">
         <Button
-          mt={isNotSmallerScreen ? 0 : 3}
+          mt={!isSmallerScreen ? 0 : 3}
           backgroundColor={"gray.900"}
           leftIcon={<FaEnvelope />}
           variant="solid"

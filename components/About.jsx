@@ -2,9 +2,9 @@ import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import profileImage from "../public/profileImage.jpg";
 import Image from "next/image";
 import styles from "../styles/About.module.css";
-import { useMediaQuery } from "@chakra-ui/media-query";
-
+import { useMediaQuery } from "react-responsive";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
+import { motion } from "framer-motion";
 
 const About = () => {
   const breakpoints = createBreakpoints({
@@ -15,13 +15,15 @@ const About = () => {
     "2xl": "1200px",
   });
 
-  const [isNotSmallerScreen] = useMediaQuery("(min-width:640px)");
+  const isSmallerScreen = useMediaQuery({
+    query: "(max-width:600px)",
+  });
 
   return (
     <Flex
       alignItems="center"
       justifyContent="center"
-      flexDirection={isNotSmallerScreen ? "row" : "column"}
+      flexDirection={!isSmallerScreen ? "row" : "column"}
       mt={{ sm: 0, md: 10 }}
       mr={{ md: 5 }}
     >
@@ -52,9 +54,9 @@ const About = () => {
         </Text>
       </Box>
       <Box
-        maxWidth={isNotSmallerScreen ? "400px" : "150px"}
-        mt={isNotSmallerScreen ? 0 : "3em"}
-        ml={isNotSmallerScreen ? "1em" : 0}
+        maxWidth={!isSmallerScreen ? "400px" : "150px"}
+        mt={!isSmallerScreen ? 0 : "3em"}
+        ml={!isSmallerScreen ? "1em" : 0}
         className={styles.profilePhoto}
       >
         <Image src={profileImage} alt="Profile photo" />

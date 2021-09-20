@@ -17,7 +17,9 @@ const Intro = () => {
   const formBackground = useColorModeValue("gray.100", "gray.700");
   const fontColor = useColorModeValue("grey", "white");
 
-  const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+  const isSmallerScreen = useMediaQuery({
+    query: "(max-width:600px)",
+  });
 
   return (
     <Flex pb={12} rounded={6} flexDirection={"column"}>
@@ -25,7 +27,7 @@ const Intro = () => {
         <Heading color="teal.300" mb={1} as="h3" size="lg">
           Hi there! I am-
         </Heading>
-        <Heading mb={2} fontSize={isNotSmallerScreen ? "4em" : "2.25em"}>
+        <Heading mb={2} fontSize={!isSmallerScreen ? "3em" : "3.5em"}>
           Phil Smithies.
         </Heading>
         <Text fontSize="2xl">
