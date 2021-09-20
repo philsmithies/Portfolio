@@ -1,12 +1,10 @@
-import { Button, Box, useColorMode, useColorModeValue } from "@chakra-ui/react";
-
+import { Button, Box } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/layout";
-
+import { useMediaQuery } from "@chakra-ui/media-query";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const ButtonBar = () => {
-  const { toggleColorMode } = useColorMode();
-  const backgroundColor = useColorModeValue("white", "gray.900");
+  const [isNotSmallerScreen] = useMediaQuery("(min-width:640px)");
 
   return (
     <Box mt="5">
@@ -40,6 +38,7 @@ const ButtonBar = () => {
       </Link>
       <Link href="mailto:philsmithies@gmail.com">
         <Button
+          mt={isNotSmallerScreen ? 0 : 3}
           backgroundColor={"gray.900"}
           leftIcon={<FaEnvelope />}
           variant="solid"

@@ -10,25 +10,15 @@ import {
 import { Link } from "@chakra-ui/layout";
 import { FaGithub } from "react-icons/fa";
 import { MdLaunch } from "react-icons/md";
-import { createBreakpoints } from "@chakra-ui/theme-tools";
 import { useState, useEffect } from "react";
+import { useMediaQuery } from "@chakra-ui/media-query";
 
 export default function Card(props) {
   const backgroundColor = useColorModeValue("white", "gray.800");
 
   const [isMobile, setIsMobile] = useState(false);
 
-  const handleResize = () => {
-    if (window.innerWidth < 700) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-  });
+  const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
   return (
     <Box
@@ -71,17 +61,17 @@ export default function Card(props) {
             </Link>
           </Flex>
         </Box>
-        {props.react && !isMobile && (
+        {props.react && !isNotSmallerScreen && (
           <Badge fontSize="0.8em" colorScheme="green">
             React
           </Badge>
         )}
-        {props.ruby && !isMobile && (
+        {props.ruby && !isNotSmallerScreen && (
           <Badge fontSize="0.8em" colorScheme="pink">
             Ruby on Rails
           </Badge>
         )}
-        {props.javascript && !isMobile && (
+        {props.javascript && !isNotSmallerScreen && (
           <Badge
             ml={props.react || props.ruby ? 1 : ""}
             fontSize="0.8em"
@@ -90,7 +80,7 @@ export default function Card(props) {
             Javascript
           </Badge>
         )}
-        {props.node && !isMobile && (
+        {props.node && !isNotSmallerScreen && (
           <Badge ml="1" fontSize="0.8em" colorScheme="orange">
             Node.JS
           </Badge>

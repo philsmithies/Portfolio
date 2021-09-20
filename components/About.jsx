@@ -2,6 +2,7 @@ import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import profileImage from "../public/profileImage.jpg";
 import Image from "next/image";
 import styles from "../styles/About.module.css";
+import { useMediaQuery } from "@chakra-ui/media-query";
 
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 
@@ -14,11 +15,13 @@ const About = () => {
     "2xl": "1200px",
   });
 
+  const [isNotSmallerScreen] = useMediaQuery("(min-width:640px)");
+
   return (
     <Flex
       alignItems="center"
       justifyContent="center"
-      flexDirection={{ sm: "column", lg: "row" }}
+      flexDirection={isNotSmallerScreen ? "row" : "column"}
       mt={{ sm: 0, md: 10 }}
       mr={{ md: 5 }}
     >
@@ -44,12 +47,14 @@ const About = () => {
         </Text>
         <br />
         <Text fontSize={{ sm: "1.2em", md: "1.3em" }}>
-          I&apos;m a Pho officiando and have been trying to perfect my own
-          recipe since visiting Vietnam in 2017. 🍜
+          I&apos;m a self certified Pho officiando and have been trying to
+          perfect my own recipe. 🍜
         </Text>
       </Box>
       <Box
-        maxWidth={{ sm: "150px", md: "250px" }}
+        maxWidth={isNotSmallerScreen ? "400px" : "150px"}
+        mt={isNotSmallerScreen ? 0 : "3em"}
+        ml={isNotSmallerScreen ? "1em" : 0}
         className={styles.profilePhoto}
       >
         <Image src={profileImage} alt="Profile photo" />

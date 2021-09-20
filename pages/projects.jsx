@@ -57,7 +57,9 @@ const Projects = () => {
           imageUrl={"./preview_map.png"}
           imageAlt={"Shuttr - A Photo Location Discovery Application"}
           title={"Shuttr"}
-          body={"A Photo Sharing and Location Discovery Application"}
+          body={
+            "A Photo Sharing and Location Discovery Application combining the Google Maps API with image sharing."
+          }
           link={"https://www.github.com/philsmithies/shuttr"}
           react={true}
           javascript={true}
@@ -68,7 +70,7 @@ const Projects = () => {
           imageUrl="./chitter.png"
           imageAlt={"Chitter - A Twitter Clone"}
           title={"Chitter"}
-          body={"A Social Media Clone"}
+          body={"A Popular Social Media Clone built using the MERN Stack."}
           link={"https://www.github.com/philsmithies/chitter-react"}
           react={true}
           javascript={true}
@@ -78,7 +80,9 @@ const Projects = () => {
           imageUrl={"./cv_generator.png"}
           imageAlt={"CV Generator - A CV Generator in React"}
           title={"CV Generator"}
-          body={"A dynamic CV Generator written in React"}
+          body={
+            "A dynamic CV Generator written in React, written utilizing React Hooks"
+          }
           link={"https://github.com/philsmithies/cv-generator/"}
           react={true}
           javascript={true}

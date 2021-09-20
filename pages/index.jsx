@@ -10,6 +10,7 @@ import {
   useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { useMediaQuery } from "@chakra-ui/media-query";
 
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 
@@ -28,10 +29,7 @@ const IndexPage = () => {
     xl: "1048px",
   });
 
-  const verticalContent = useBreakpointValue({
-    sm: <p>asdas</p>,
-    md: <p>no no no</p>,
-  });
+  const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
   return (
     <Flex
@@ -44,12 +42,16 @@ const IndexPage = () => {
         <title>Phil Smithies: Dev</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Box width={"70%"} maxWidth="800px" mb={"20%"}>
+      <Box
+        width={isNotSmallerScreen ? "80%" : "90%"}
+        maxWidth="800px"
+        mb={"20%"}
+      >
         <Intro />
         <About />
 
         <Flex
-          direction={{ sm: "column", md: "row" }}
+          direction={isNotSmallerScreen ? "row" : "column"}
           justifyContent="center"
           alignItems="center"
           mt={"10%"}
@@ -58,7 +60,7 @@ const IndexPage = () => {
           <Flex direction="column" pt={10}>
             <Box alignSelf="flex-start">
               <Heading
-                fontSize={{ sm: "35px", lg: "52px" }}
+                fontSize={isNotSmallerScreen ? "52px" : "35px"}
                 mr={{ sm: 0, lg: 10 }}
               >
                 View my projects
@@ -86,7 +88,7 @@ const IndexPage = () => {
               />
             </Box>
           </Flex>
-          <Flex direction="column" ml={{ sm: 0, md: 6 }}>
+          <Flex direction="column" ml={isNotSmallerScreen ? "1em" : 0}>
             <Box>
               <Card
                 imageUrl="./chitter.png"
@@ -117,29 +119,6 @@ const IndexPage = () => {
               />
             </Box>
           </Flex>
-          {/* <Box ml={{ sm: 0, md: 6 }}>
-            <Card
-              imageUrl="./chitter.png"
-              imageAlt={"Chitter - A Twitter Clone"}
-              title={"Chitter"}
-              body={"A Social Media Clone"}
-              link={"https://www.github.com/philsmithies/chitter-react"}
-              react={true}
-              javascript={true}
-              node={true}
-              size={{ sm: "md", lg: "sm" }}
-            />
-            <Card
-              imageUrl={"./cv_generator.png"}
-              imageAlt={"CV Generator - A CV Generator in React"}
-              title={"CV Generator"}
-              body={"A dynamic CV Generator written in React"}
-              link={"https://github.com/philsmithies/cv-generator/"}
-              react={true}
-              javascript={true}
-              size={{ sm: "md", lg: "sm" }}
-            />
-          </Box> */}
         </Flex>
         <Contact />
       </Box>

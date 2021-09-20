@@ -3,24 +3,21 @@ import {
   Flex,
   Box,
   Text,
+  Image,
   Heading,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
 import ButtonBar from "./ButtonBar";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
+import { useMediaQuery } from "@chakra-ui/media-query";
 
 const Intro = () => {
   const { toggleColorMode } = useColorMode();
   const formBackground = useColorModeValue("gray.100", "gray.700");
   const fontColor = useColorModeValue("grey", "white");
-  const breakpoints = createBreakpoints({
-    sm: "300px",
-    md: "480px",
-    lg: "800px",
-    xl: "1048px",
-    "2xl": "1200px",
-  });
+
+  const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
   return (
     <Flex pb={12} rounded={6} flexDirection={"column"}>
@@ -28,14 +25,14 @@ const Intro = () => {
         <Heading color="teal.300" mb={1} as="h3" size="lg">
           Hi there! I am-
         </Heading>
-        <Heading mb={2} fontSize={{ sm: "4.25em", md: "4.25em", lg: "5.6em" }}>
+        <Heading mb={2} fontSize={isNotSmallerScreen ? "4em" : "2.25em"}>
           Phil Smithies.
         </Heading>
         <Text fontSize="2xl">
           Full Stack Web Developer.{" "}
           <Text color={fontColor}>
-            Specializing in building clean, and engaging applications on the
-            web.
+            React & Node.JS. Specializing in building clean and stylish web
+            applications.
           </Text>
         </Text>
         <br />

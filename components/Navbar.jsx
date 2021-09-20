@@ -7,13 +7,17 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { IconButton } from "@chakra-ui/button";
 import Link from "next/link";
-import { createBreakpoints } from "@chakra-ui/theme-tools";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 const Navbar = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+  const isDark = colorMode === "dark";
+
   return (
     <Flex backgroundColor={"gray.900"}>
-      <Box p="4">
+      <Box pt="4">
         <Link href="/" passHref>
           <Heading
             _hover={{
@@ -35,6 +39,12 @@ const Navbar = () => {
         <Link href="/projects" passHref>
           <Button>Projects</Button>
         </Link>
+        {/* <IconButton
+          ml={5}
+          icon={isDark ? <FaSun /> : <FaMoon />}
+          isRound="true"
+          onClick={toggleColorMode}
+        ></IconButton> */}
         {/* <Button mr="5">Projects</Button> */}
       </Box>
     </Flex>
