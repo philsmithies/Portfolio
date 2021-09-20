@@ -20,18 +20,18 @@ const Projects = () => {
     xl: "1048px",
   });
 
-  const isSmallerScreen = useMediaQuery({
-    query: "(max-width:600px)",
-  });
+  const [isSmallerScreen] = useMediaQuery(`(max-width: 380px)`);
 
   return (
     <Flex
       pt={!isSmallerScreen ? "10%" : "15%"}
       pb={!isSmallerScreen ? "15%" : "30%"}
+      pr={!isSmallerScreen ? "5%" : ""}
+      pl={!isSmallerScreen ? "5%" : ""}
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
-      width="95%"
+      width="90%"
       background={formBackground}
     >
       <Grid
