@@ -57,7 +57,7 @@ const IndexPage = () => {
             <Box alignSelf="flex-start">
               <Heading
                 fontSize={!isSmallerScreen ? "52px" : "35px"}
-                mr={{ sm: 0, lg: 10 }}
+                mr={!isSmallerScreen ? 10 : 0}
                 color="white"
               >
                 View my projects
