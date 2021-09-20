@@ -20,6 +20,7 @@ const ButtonBar = () => {
           backgroundColor={"gray.900"}
           leftIcon={<FaGithub />}
           variant="solid"
+          color="white"
         >
           Github
         </Button>
@@ -34,6 +35,7 @@ const ButtonBar = () => {
           backgroundColor={"gray.900"}
           leftIcon={<FaLinkedin />}
           variant="solid"
+          color="white"
         >
           Linkedin
         </Button>
@@ -44,6 +46,7 @@ const ButtonBar = () => {
           backgroundColor={"gray.900"}
           leftIcon={<FaEnvelope />}
           variant="solid"
+          color="white"
         >
           Email
         </Button>

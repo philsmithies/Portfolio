@@ -58,6 +58,7 @@ const IndexPage = () => {
               <Heading
                 fontSize={!isSmallerScreen ? "52px" : "35px"}
                 mr={{ sm: 0, lg: 10 }}
+                color="white"
               >
                 View my projects
               </Heading>

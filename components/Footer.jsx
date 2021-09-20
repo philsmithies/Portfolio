@@ -4,9 +4,9 @@ import { FaGithub } from "react-icons/fa";
 import { IconButton } from "@chakra-ui/button";
 
 const Footer = () => {
-  const { toggleColorMode } = useColorMode();
-  const buttonColor = useColorModeValue("white", "black");
-  const backgroundColor = useColorModeValue("white", "gray.900");
+  const buttonColor = "white";
+  const backgroundColor = "gray.900";
+
   return (
     <Box position="relative">
       <Flex

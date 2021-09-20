@@ -14,8 +14,8 @@ import { useMediaQuery } from "@chakra-ui/media-query";
 
 const Intro = () => {
   const { toggleColorMode } = useColorMode();
-  const formBackground = useColorModeValue("gray.100", "gray.700");
-  const fontColor = useColorModeValue("grey", "white");
+  const formBackground = "gray.700";
+  const fontColor = "white";
 
   const isSmallerScreen = useMediaQuery({
     query: "(max-width:600px)",

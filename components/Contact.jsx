@@ -21,8 +21,10 @@ const Contact = () => {
         borderColor="white"
         borderRadius="10px"
       >
-        <Heading pb={5}>Get in touch.</Heading>
-        <Text>
+        <Heading pb={5} color="white">
+          Get in touch.
+        </Heading>
+        <Text color="white">
           Full Stack Developer looking for roles in React and other Javascript
           frameworks.
         </Text>

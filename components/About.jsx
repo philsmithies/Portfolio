@@ -35,20 +35,20 @@ const About = () => {
         <Heading as="h3" mb={5}>
           About Me
         </Heading>
-        <Text fontSize={{ sm: "1.2em", md: "1.3em" }}>
+        <Text color="white" fontSize={{ sm: "1.2em", md: "1.3em" }}>
           Hey! I&apos;m Phil Smithies, I&apos;ve been interested in computers
           since I was small. I love building web applications and bringing my
           ideas into a full fledged product.
         </Text>
         <br />
-        <Text fontSize={{ sm: "1.2em", md: "1.3em" }}>
+        <Text color="white" fontSize={{ sm: "1.2em", md: "1.3em" }}>
           I program multiple languages, and have just graduated from{" "}
           <b>Makers Academy</b> - a selective full stack bootcamp. I&apos;m
           interested in building applications in and not limited to <b>React</b>
           , <b>Javascript</b>, Ruby, HTML, CSS.
         </Text>
         <br />
-        <Text fontSize={{ sm: "1.2em", md: "1.3em" }}>
+        <Text color="white" fontSize={{ sm: "1.2em", md: "1.3em" }}>
           I&apos;m a self certified Pho officiando and have been trying to
           perfect my own recipe. 🍜
         </Text>

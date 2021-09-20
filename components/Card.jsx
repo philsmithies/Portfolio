@@ -86,7 +86,9 @@ export default function Card(props) {
             Node.JS
           </Badge>
         )}
-        <Box mt={2}>{props.body}</Box>
+        <Box color="white" mt={2}>
+          {props.body}
+        </Box>
       </Box>
     </Box>
   );
