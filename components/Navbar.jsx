@@ -4,16 +4,16 @@ import {
   Box,
   Spacer,
   Heading,
-  useColorMode,
-  useColorModeValue,
+  // useColorMode,
+  // useColorModeValue,
 } from "@chakra-ui/react";
 import { IconButton } from "@chakra-ui/button";
 import Link from "next/link";
 import { FaSun, FaMoon } from "react-icons/fa";
 
 const Navbar = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  const isDark = colorMode === "dark";
+  // const { colorMode, toggleColorMode } = useColorMode();
+  // const isDark = colorMode === "dark";
 
   return (
     <Flex backgroundColor={"gray.900"}>
