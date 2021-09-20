@@ -20,23 +20,25 @@ const Projects = () => {
   });
   return (
     <Flex
-      pt={"5%"}
+      pt={{ sm: "10%", md: "0" }}
+      pl={"5%"}
+      pb={{ sm: "30%", md: "15%" }}
       minHeight="100vh"
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
-      mb="15%"
+      maxWidth="95vw"
       background={formBackground}
     >
       <Grid
         templateColumns={{
-          sm: "repeat(1, 380px)",
-          md: "repeat(1, 430px)",
+          sm: "380px",
+          md: "420px",
           lg: "repeat(2, 380px)",
         }}
         templateRows={{
-          sm: "200px",
-          md: "repeat(3, 400px)",
+          sm: "100px",
+          md: "100px",
           lg: "repeat(3, 430px)",
         }}
         gap={6}
@@ -90,14 +92,6 @@ const Projects = () => {
           }
           link={"https://github.com/philsmithies/acebook-team-smiley-face"}
           ruby={true}
-          javascript={true}
-        />
-        <Card
-          imageUrl={"./tictactoe.png"}
-          imageAlt={"Tic Tac Toe"}
-          title={"Tic Tac Toe"}
-          body={"TDD Game of the coding students favourite."}
-          link={"https://github.com/philsmithies/tictactoe/"}
           javascript={true}
         />
       </Grid>
