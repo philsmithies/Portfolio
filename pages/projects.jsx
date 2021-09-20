@@ -33,7 +33,7 @@ const Projects = () => {
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
-      maxWidth="95vw"
+      maxWidth="80vw"
       background={formBackground}
     >
       <Grid

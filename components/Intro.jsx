@@ -27,7 +27,11 @@ const Intro = () => {
         <Heading color="teal.300" mb={1} as="h3" size="lg">
           Hi there! I am-
         </Heading>
-        <Heading mb={2} fontSize={!isSmallerScreen ? "3em" : "3.5em"}>
+        <Heading
+          color="white"
+          mb={2}
+          fontSize={!isSmallerScreen ? "3em" : "3.5em"}
+        >
           Phil Smithies.
         </Heading>
         <Text fontSize="2xl">
