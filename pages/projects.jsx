@@ -9,7 +9,7 @@ import Head from "next/head";
 import Intro from "../components/Intro";
 import Card from "../components/Card";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
-import { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from "@chakra-ui/react";
 
 const Projects = () => {
   const formBackground = "gray.800";
