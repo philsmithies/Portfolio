@@ -85,7 +85,6 @@ const IndexPage = () => {
                 react={true}
                 javascript={true}
                 node={true}
-                size={!isSmallerScreen ? "md" : "sm"}
               />
             </Box>
           </Flex>
@@ -102,7 +101,6 @@ const IndexPage = () => {
                 react={true}
                 javascript={true}
                 node={true}
-                size={!isSmallerScreen ? "md" : "sm"}
               />
             </Box>
             <Box>
@@ -116,7 +114,6 @@ const IndexPage = () => {
                 link={"https://github.com/philsmithies/cv-generator/"}
                 react={true}
                 javascript={true}
-                size={!isSmallerScreen ? "md" : "sm"}
               />
             </Box>
           </Flex>
