@@ -7,13 +7,13 @@ import {
   Heading,
   Link,
   useColorMode,
+  useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react";
 
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 
 import Head from "next/head";
-// import Link from "next/link";
 import Intro from "../components/Intro";
 import About from "../components/About";
 import Contact from "../components/Contact";
@@ -26,6 +26,11 @@ const IndexPage = () => {
     md: "600px",
     lg: "850px",
     xl: "1048px",
+  });
+
+  const verticalContent = useBreakpointValue({
+    sm: <p>asdas</p>,
+    md: <p>no no no</p>,
   });
 
   return (
@@ -70,17 +75,49 @@ const IndexPage = () => {
                 imageUrl={"./preview_map.png"}
                 imageAlt={"Shuttr - A Photo Location Discovery Application"}
                 title={"Shuttr"}
-                body={"A Photo Sharing and Location Discovery Application"}
+                body={
+                  "A Photo Sharing and Location Discovery Application combining the Google Maps API with image sharing."
+                }
                 link={"https://www.github.com/philsmithies/shuttr"}
                 react={true}
                 javascript={true}
                 node={true}
-                size={"sm"}
+                size={{ sm: "md", lg: "sm" }}
               />
             </Box>
           </Flex>
-
-          <Box ml={{ sm: 0, md: 6 }}>
+          <Flex direction="column" ml={{ sm: 0, md: 6 }}>
+            <Box>
+              <Card
+                imageUrl="./chitter.png"
+                imageAlt={"Chitter - A Twitter Clone"}
+                title={"Chitter"}
+                body={
+                  "A Popular Social Media Clone built using the MERN Stack."
+                }
+                link={"https://www.github.com/philsmithies/chitter-react"}
+                react={true}
+                javascript={true}
+                node={true}
+                size={{ sm: "md", lg: "sm" }}
+              />
+            </Box>
+            <Box>
+              <Card
+                imageUrl={"./cv_generator.png"}
+                imageAlt={"CV Generator"}
+                title={"CV Generator"}
+                body={
+                  "A dynamic CV Generator written in React, written utilizing React Hooks"
+                }
+                link={"https://github.com/philsmithies/cv-generator/"}
+                react={true}
+                javascript={true}
+                size={{ sm: "md", lg: "sm" }}
+              />
+            </Box>
+          </Flex>
+          {/* <Box ml={{ sm: 0, md: 6 }}>
             <Card
               imageUrl="./chitter.png"
               imageAlt={"Chitter - A Twitter Clone"}
@@ -90,7 +127,7 @@ const IndexPage = () => {
               react={true}
               javascript={true}
               node={true}
-              size={"sm"}
+              size={{ sm: "md", lg: "sm" }}
             />
             <Card
               imageUrl={"./cv_generator.png"}
@@ -100,9 +137,9 @@ const IndexPage = () => {
               link={"https://github.com/philsmithies/cv-generator/"}
               react={true}
               javascript={true}
-              size={"sm"}
+              size={{ sm: "md", lg: "sm" }}
             />
-          </Box>
+          </Box> */}
         </Flex>
         <Contact />
       </Box>

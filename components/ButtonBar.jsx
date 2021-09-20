@@ -1,15 +1,4 @@
-import {
-  Button,
-  ButtonGroup,
-  IconButton,
-  Flex,
-  Box,
-  Spacer,
-  Text,
-  Heading,
-  useColorMode,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Button, Box, useColorMode, useColorModeValue } from "@chakra-ui/react";
 
 import { Link } from "@chakra-ui/layout";
 
@@ -20,13 +9,14 @@ const ButtonBar = () => {
   const backgroundColor = useColorModeValue("white", "gray.900");
 
   return (
-    <ButtonGroup mt={5}>
+    <Box mt="5">
       <Link
         href="https://www.github.com/philsmithies"
         target="_blank"
         rel="noopener noreferrer"
       >
         <Button
+          mr="2"
           backgroundColor={"gray.900"}
           leftIcon={<FaGithub />}
           variant="solid"
@@ -40,6 +30,7 @@ const ButtonBar = () => {
         href="https://www.linkedin.com/in/phil-smithies/"
       >
         <Button
+          mr="2"
           backgroundColor={"gray.900"}
           leftIcon={<FaLinkedin />}
           variant="solid"
@@ -56,7 +47,7 @@ const ButtonBar = () => {
           Email
         </Button>
       </Link>
-    </ButtonGroup>
+    </Box>
   );
 };
 
