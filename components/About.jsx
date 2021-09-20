@@ -26,7 +26,6 @@ const About = () => {
         mr={{ sm: 0, md: 2, lg: 10 }}
         className={styles.profileText}
         pb={{ sm: "4em" }}
-        textAlign={{ sm: "center", md: "left" }}
       >
         <Heading as="h3" mb={5}>
           About Me

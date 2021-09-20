@@ -26,10 +26,8 @@ const IndexPage = () => {
     md: "600px",
     lg: "850px",
     xl: "1048px",
-    "2xl": "1200px",
   });
-  const { toggleColorMode } = useColorMode();
-  // const formBackground = useColorModeValue("gray.100", "gray.800");
+
   return (
     <Flex
       pt={"5%"}
@@ -44,12 +42,19 @@ const IndexPage = () => {
       <Box width={"70%"} maxWidth="800px" mb={"20%"}>
         <Intro />
         <About />
-        <Flex justifyContent="center" mt={"10%"} mb="15%">
+
+        <Flex
+          direction={{ sm: "column", md: "row" }}
+          justifyContent="center"
+          alignItems="center"
+          mt={"10%"}
+          mb="15%"
+        >
           <Flex direction="column" pt={10}>
             <Box alignSelf="flex-start">
               <Heading
-                fontSize={{ sm: "24px", md: "40px", lg: "52px" }}
-                mr={{ lg: 10 }}
+                fontSize={{ sm: "35px", lg: "52px" }}
+                mr={{ sm: 0, lg: 10 }}
               >
                 View my projects
               </Heading>
@@ -60,7 +65,7 @@ const IndexPage = () => {
                 </Link>
               </Text>
             </Box>
-            <Box mt={10}>
+            <Box mt={{ sm: 0, md: 10 }}>
               <Card
                 imageUrl={"./preview_map.png"}
                 imageAlt={"Shuttr - A Photo Location Discovery Application"}
@@ -74,7 +79,8 @@ const IndexPage = () => {
               />
             </Box>
           </Flex>
-          <Box ml={6}>
+
+          <Box ml={{ sm: 0, md: 6 }}>
             <Card
               imageUrl="./chitter.png"
               imageAlt={"Chitter - A Twitter Clone"}

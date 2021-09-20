@@ -11,13 +11,6 @@ import Link from "next/link";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 
 const Navbar = () => {
-  const breakpoints = createBreakpoints({
-    sm: "380px",
-    md: "500px",
-    lg: "850px",
-    xl: "1048px",
-  });
-
   return (
     <Flex backgroundColor={"gray.900"}>
       <Box p="4">
@@ -35,7 +28,7 @@ const Navbar = () => {
         </Link>
       </Box>
       <Spacer />
-      <Box p="4" mr={{ sm: 0, md: 5 }}>
+      <Box p="4">
         <Link href="/" passHref>
           <Button mr="5">Home</Button>
         </Link>
