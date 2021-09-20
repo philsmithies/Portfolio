@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import { useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 
 import { createBreakpoints } from "@chakra-ui/theme-tools";
@@ -37,6 +36,7 @@ const IndexPage = () => {
       alignItems="center"
       flexDirection="column"
       background={"gray.800"}
+      maxWidth="98%"
     >
       <Head>
         <title>Phil Smithies: Dev</title>
@@ -53,7 +53,7 @@ const IndexPage = () => {
           mt={"10%"}
           mb="15%"
         >
-          <Flex direction="column" pt={10}>
+          <Flex direction="column" pt={10} mr={!isSmallerScreen ? "1em" : 0}>
             <Box alignSelf="flex-start">
               <Heading
                 fontSize={!isSmallerScreen ? "52px" : "35px"}
@@ -69,7 +69,7 @@ const IndexPage = () => {
                 </Link>
               </Text>
             </Box>
-            <Box mt={{ sm: 0, md: 10 }} mr={!isSmallerScreen ? "1em" : 0}>
+            <Box mt={{ sm: 0, md: 10 }}>
               <Card
                 imageUrl={"./preview_map.png"}
                 imageAlt={"Shuttr - A Photo Location Discovery Application"}
@@ -84,7 +84,7 @@ const IndexPage = () => {
               />
             </Box>
           </Flex>
-          <Flex direction="column">
+          <Flex direction="column" mr={!isSmallerScreen ? "1em" : 0}>
             <Box>
               <Card
                 imageUrl="./chitter.png"
