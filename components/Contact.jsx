@@ -20,6 +20,7 @@ const Contact = () => {
         border={{ sm: 0, md: "1px" }}
         borderColor="white"
         borderRadius="10px"
+        mb="20%"
       >
         <Heading pb={5} color="white">
           Get in touch.
