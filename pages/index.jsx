@@ -32,7 +32,7 @@ const IndexPage = () => {
     xl: "1048px",
   });
 
-  const [isSmallerScreen] = useMediaQuery(`(max-width: 600px)`);
+  const [isSmallerScreen] = useMediaQuery(`(max-width: 380px)`);
 
   return (
     <Flex
