@@ -1,7 +1,15 @@
-import { Flex, Heading, Box } from "@chakra-ui/layout";
+import { Flex, Heading, Box, Text } from "@chakra-ui/layout";
 import ContactButtonBar from "./ContactButtonBar";
+import { createBreakpoints } from "@chakra-ui/theme-tools";
 
 const Contact = () => {
+  const breakpoints = createBreakpoints({
+    sm: "300px",
+    md: "480px",
+    lg: "800px",
+    xl: "1048px",
+    "2xl": "1200px",
+  });
   return (
     <Flex alignItems="center" flexDirection="column" pt={"5%"}>
       <Flex
@@ -9,15 +17,15 @@ const Contact = () => {
         alignItems="center"
         padding="4em"
         flexDirection="column"
-        border="1px"
+        border={{ sm: 0, md: "1px" }}
         borderColor="white"
         borderRadius="10px"
       >
         <Heading pb={5}>Get in touch.</Heading>
-        <p>
+        <Text>
           Full Stack Developer looking for roles in React and other Javascript
           frameworks.
-        </p>
+        </Text>
         <ContactButtonBar />
       </Flex>
     </Flex>

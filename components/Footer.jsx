@@ -1,4 +1,4 @@
-import { Flex, Box } from "@chakra-ui/layout";
+import { Flex, Box, Text } from "@chakra-ui/layout";
 import { Link, useColorModeValue, useColorMode } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import { IconButton } from "@chakra-ui/button";
@@ -39,7 +39,7 @@ const Footer = () => {
             />
           </Link>
         </Flex>
-        <p>
+        <Text>
           Built with{" "}
           <Link color="teal.300" href="https://nextjs.org/">
             Next.js
@@ -53,7 +53,7 @@ const Footer = () => {
             Vercel
           </Link>
           .
-        </p>
+        </Text>
       </Flex>
     </Box>
   );

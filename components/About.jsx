@@ -19,7 +19,7 @@ const About = () => {
       alignItems="center"
       justifyContent="center"
       flexDirection={{ sm: "column", lg: "row" }}
-      mt={10}
+      mt={{ sm: 0, md: 10 }}
       mr={{ md: 5 }}
     >
       <Box
@@ -49,7 +49,10 @@ const About = () => {
           recipe since visiting Vietnam in 2017. 🍜
         </Text>
       </Box>
-      <Box maxWidth="300px" className={styles.profilePhoto}>
+      <Box
+        maxWidth={{ sm: "150px", md: "250px" }}
+        className={styles.profilePhoto}
+      >
         <Image src={profileImage} alt="Profile photo" />
       </Box>
     </Flex>

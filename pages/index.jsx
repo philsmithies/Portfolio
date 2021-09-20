@@ -1,6 +1,7 @@
 import {
   Button,
   Flex,
+  Text,
   Box,
   Spacer,
   Heading,
@@ -40,10 +41,10 @@ const IndexPage = () => {
         <title>Phil Smithies: Dev</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Box width={"70%"} mb={"20%"}>
+      <Box width={"70%"} maxWidth="800px" mb={"20%"}>
         <Intro />
         <About />
-        <Flex justifyContent="center" mt={"20%"} mb="15%">
+        <Flex justifyContent="center" mt={"10%"} mb="15%">
           <Flex direction="column" pt={10}>
             <Box alignSelf="flex-start">
               <Heading
@@ -52,12 +53,12 @@ const IndexPage = () => {
               >
                 View my projects
               </Heading>
-              <p>
+              <Text>
                 All of my projects can be seen{" "}
                 <Link color={"teal.400"} href="/projects">
                   here
                 </Link>
-              </p>
+              </Text>
             </Box>
             <Box mt={10}>
               <Card

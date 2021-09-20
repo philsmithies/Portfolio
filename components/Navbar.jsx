@@ -8,11 +8,15 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import { createBreakpoints } from "@chakra-ui/theme-tools";
 
 const Navbar = () => {
-  // const { toggleColorMode } = useColorMode();
-  // const fontColor = useColorModeValue("black", "white");
-  // const backgroundColor = useColorModeValue("white", "gray.900");
+  const breakpoints = createBreakpoints({
+    sm: "380px",
+    md: "500px",
+    lg: "850px",
+    xl: "1048px",
+  });
 
   return (
     <Flex backgroundColor={"gray.900"}>
@@ -21,9 +25,9 @@ const Navbar = () => {
           <Heading
             _hover={{
               cursor: "pointer",
-              color: "teal.300",
+              color: "teal.500",
             }}
-            color={"white"}
+            color={"teal.100"}
             ml="6"
           >
             P
@@ -31,7 +35,7 @@ const Navbar = () => {
         </Link>
       </Box>
       <Spacer />
-      <Box p="4" mr="5">
+      <Box p="4" mr={{ sm: 0, md: 5 }}>
         <Link href="/" passHref>
           <Button mr="5">Home</Button>
         </Link>

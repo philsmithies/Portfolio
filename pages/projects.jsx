@@ -20,7 +20,7 @@ const Projects = () => {
   });
   return (
     <Flex
-      pt={{ sm: "10%", md: "0" }}
+      pt={{ sm: "10%", md: "5%" }}
       pl={"5%"}
       pb={{ sm: "30%", md: "15%" }}
       minHeight="100vh"
