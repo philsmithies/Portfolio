@@ -12,7 +12,7 @@ import { createBreakpoints } from "@chakra-ui/theme-tools";
 import { useMediaQuery } from "react-responsive";
 
 const Projects = () => {
-  const formBackground = useColorModeValue("gray.100", "gray.800");
+  const formBackground = "gray.800";
   const breakpoints = createBreakpoints({
     sm: "380px",
     md: "500px",

@@ -40,7 +40,7 @@ export default function Card(props) {
         />
       </Link>
       <Box p="5">
-        <Box fontWeight="semibold" as="h4" lineHeight="tight">
+        <Box fontWeight="semibold" as="h4" lineHeight="tight" color="white">
           <Flex alignItems="center">
             {props.title}
             <Spacer />
