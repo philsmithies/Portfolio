@@ -34,7 +34,7 @@ const Projects = () => {
     >
       <Grid
         templateColumns={{
-          sm: "360px",
+          sm: "90%",
           md: "420px",
           lg: "repeat(2, 380px)",
         }}
