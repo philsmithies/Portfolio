@@ -8,8 +8,9 @@ import {
   Link,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 
@@ -20,9 +21,9 @@ import Contact from "../components/Contact";
 import Card from "../components/Card";
 
 const IndexPage = () => {
-  const isSmallerScreen = useMediaQuery({
-    query: "(max-width:600px)",
-  });
+  // const isSmallerScreen = useMediaQuery({
+  //   query: "(max-width:600px)",
+  // });
 
   const breakpoints = createBreakpoints({
     sm: "320px",
@@ -30,6 +31,8 @@ const IndexPage = () => {
     lg: "850px",
     xl: "1048px",
   });
+
+  const [isSmallerScreen] = useMediaQuery(`(max-width: 600px)`);
 
   return (
     <Flex

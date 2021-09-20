@@ -11,15 +11,11 @@ import { Link } from "@chakra-ui/layout";
 import { FaGithub } from "react-icons/fa";
 import { MdLaunch } from "react-icons/md";
 import { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from "@chakra-ui/react";
 export default function Card(props) {
   const backgroundColor = "gray.800";
 
-  const [isMobile, setIsMobile] = useState(false);
-
-  const isSmallerScreen = useMediaQuery({
-    query: "(max-width:600px)",
-  });
+  const [isSmallerScreen] = useMediaQuery(`(max-width: 600px)`);
 
   return (
     <Box

@@ -1,12 +1,10 @@
 import { Button, Box } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/layout";
-import { useMediaQuery } from "@chakra-ui/media-query";
+import { useMediaQuery } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const ButtonBar = () => {
-  const isSmallerScreen = useMediaQuery({
-    query: "(max-width:600px)",
-  });
+  const [isSmallerScreen] = useMediaQuery(`(max-width: 600px)`);
 
   return (
     <Box mt="5">

@@ -10,16 +10,14 @@ import {
 } from "@chakra-ui/react";
 import ButtonBar from "./ButtonBar";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
-import { useMediaQuery } from "@chakra-ui/media-query";
+import { useMediaQuery } from "@chakra-ui/react";
 
 const Intro = () => {
   const { toggleColorMode } = useColorMode();
   const formBackground = "gray.700";
   const fontColor = "white";
 
-  const isSmallerScreen = useMediaQuery({
-    query: "(max-width:600px)",
-  });
+  const [isSmallerScreen] = useMediaQuery(`(max-width: 600px)`);
 
   return (
     <Flex pb={12} rounded={6} flexDirection={"column"}>
@@ -30,7 +28,7 @@ const Intro = () => {
         <Heading
           color="white"
           mb={2}
-          fontSize={!isSmallerScreen ? "3em" : "3.5em"}
+          fontSize={isSmallerScreen ? "3em" : "3.5em"}
         >
           Phil Smithies.
         </Heading>

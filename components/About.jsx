@@ -2,7 +2,8 @@ import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import profileImage from "../public/profileImage.jpg";
 import Image from "next/image";
 import styles from "../styles/About.module.css";
-import { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from "@chakra-ui/react";
+
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 import { motion } from "framer-motion";
 
@@ -15,9 +16,7 @@ const About = () => {
     "2xl": "1200px",
   });
 
-  const isSmallerScreen = useMediaQuery({
-    query: "(max-width:600px)",
-  });
+  const [isSmallerScreen] = useMediaQuery(`(max-width: 600px)`);
 
   return (
     <Flex
