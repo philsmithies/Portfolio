@@ -22,10 +22,6 @@ import Contact from "../components/Contact";
 import Card from "../components/Card";
 
 const IndexPage = () => {
-  // const isSmallerScreen = useMediaQuery({
-  //   query: "(max-width:600px)",
-  // });
-
   const breakpoints = createBreakpoints({
     sm: "320px",
     md: "600px",
@@ -73,7 +69,7 @@ const IndexPage = () => {
                 </Link>
               </Text>
             </Box>
-            <Box mt={{ sm: 0, md: 10 }}>
+            <Box mt={{ sm: 0, md: 10 }} mr={!isSmallerScreen ? "1em" : 0}>
               <Card
                 imageUrl={"./preview_map.png"}
                 imageAlt={"Shuttr - A Photo Location Discovery Application"}
@@ -88,7 +84,7 @@ const IndexPage = () => {
               />
             </Box>
           </Flex>
-          <Flex direction="column" ml={!isSmallerScreen ? "1em" : 0}>
+          <Flex direction="column">
             <Box>
               <Card
                 imageUrl="./chitter.png"
