@@ -62,7 +62,7 @@ const IndexPage = () => {
               >
                 View my projects
               </Heading>
-              <Text>
+              <Text color="white">
                 All of my projects can be seen{" "}
                 <Link color={"teal.400"} href="/projects">
                   here

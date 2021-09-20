@@ -13,7 +13,7 @@ import { MdLaunch } from "react-icons/md";
 import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 export default function Card(props) {
-  const backgroundColor = useColorModeValue("white", "gray.800");
+  const backgroundColor = "gray.800";
 
   const [isMobile, setIsMobile] = useState(false);
 
