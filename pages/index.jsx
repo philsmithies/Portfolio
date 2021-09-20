@@ -6,9 +6,7 @@ import {
   Spacer,
   Heading,
   Link,
-  useColorMode,
   useBreakpointValue,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
