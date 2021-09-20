@@ -11,6 +11,7 @@ import {
 import { useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import styles from "../styles/Home.module.css";
 
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 
@@ -50,7 +51,7 @@ const IndexPage = () => {
         <About />
 
         <Flex
-          direction={!isSmallerScreen ? "row" : "column"}
+          className={styles.flexDirectionDiv}
           justifyContent="center"
           alignItems="center"
           mt={"10%"}
