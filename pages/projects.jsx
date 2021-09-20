@@ -27,7 +27,7 @@ const Projects = () => {
     <Flex alignItems="center" flexDirection="column" background={"gray.800"}>
       <Grid
         templateColumns={{
-          sm: "90%",
+          sm: "360px",
           md: "420px",
           lg: "repeat(2, 380px)",
         }}
