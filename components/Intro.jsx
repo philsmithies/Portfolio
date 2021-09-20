@@ -20,7 +20,11 @@ const Intro = () => {
   const [isSmallerScreen] = useMediaQuery(`(max-width: 600px)`);
 
   return (
-    <Flex pb={12} rounded={6} flexDirection={"column"}>
+    <Flex
+      pb={!isSmallerScreen ? "12" : "3"}
+      rounded={6}
+      flexDirection={"column"}
+    >
       <Box mr={{ sm: 0, md: 2, lg: 10 }} pb={{ sm: "2em" }}>
         <Heading color="teal.300" mb={1} as="h3" size="lg">
           Hi there! I am-
@@ -28,7 +32,7 @@ const Intro = () => {
         <Heading
           color="white"
           mb={2}
-          fontSize={isSmallerScreen ? "3em" : "3.5em"}
+          fontSize={!isSmallerScreen ? "3em" : "3.5em"}
         >
           Phil Smithies.
         </Heading>

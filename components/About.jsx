@@ -23,7 +23,6 @@ const About = () => {
       alignItems="center"
       justifyContent="center"
       flexDirection={!isSmallerScreen ? "row" : "column"}
-      mt={{ sm: 0, md: 10 }}
       mr={{ md: 5 }}
     >
       <Box

@@ -18,7 +18,6 @@ const Projects = () => {
     sm: "380px",
     md: "500px",
     lg: "850px",
-    xl: "1048px",
   });
 
   const [isSmallerScreen] = useMediaQuery(`(max-width: 380px)`);
@@ -26,14 +25,13 @@ const Projects = () => {
   return (
     <Flex alignItems="center" flexDirection="column" background={"gray.800"}>
       <Grid
+        maxWidth="90%"
         templateColumns={{
           sm: "360px",
-          md: "420px",
           lg: "repeat(2, 380px)",
         }}
         templateRows={{
           sm: "100px",
-          md: "100px",
           lg: "repeat(3, 430px)",
         }}
         gap={6}

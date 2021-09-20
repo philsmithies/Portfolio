@@ -46,7 +46,7 @@ const IndexPage = () => {
         <title>Phil Smithies: Dev</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Box width={!isSmallerScreen ? "80%" : "90%"} maxWidth="800px" mb={"20%"}>
+      <Box width={!isSmallerScreen ? "80%" : "90%"} maxWidth="800px" mb={"15%"}>
         <Intro />
         <About />
 

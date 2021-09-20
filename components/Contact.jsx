@@ -11,7 +11,7 @@ const Contact = () => {
     "2xl": "1200px",
   });
   return (
-    <Flex alignItems="center" flexDirection="column" pt={"5%"}>
+    <Flex alignItems="center" flexDirection="column">
       <Flex
         justifyContent="center"
         alignItems="center"
