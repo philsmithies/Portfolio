@@ -27,11 +27,11 @@ const Projects = () => {
   return (
     <Flex
       pt={!isSmallerScreen ? "10%" : "15%"}
-      pb={{ sm: "30%", md: "15%" }}
+      pb={!isSmallerScreen ? "15%" : "30%"}
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
-      width="100vw"
+      width="95%"
       background={formBackground}
     >
       <Grid
