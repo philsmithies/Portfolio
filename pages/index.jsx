@@ -36,7 +36,6 @@ const IndexPage = () => {
       alignItems="center"
       flexDirection="column"
       background={"gray.800"}
-      maxWidth="98%"
     >
       <Head>
         <title>Phil Smithies: Dev</title>
