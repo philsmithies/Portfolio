@@ -35,8 +35,7 @@ const Projects = () => {
           lg: "repeat(3, 430px)",
         }}
         gap={6}
-        // background={formBackground}
-        pt={!isSmallerScreen ? "10%" : "15%"}
+        pt={!isSmallerScreen ? "9%" : "15%"}
         pb={!isSmallerScreen ? "20%" : "30%"}
       >
         <Head>
@@ -55,7 +54,7 @@ const Projects = () => {
           imageAlt={"Shuttr - A Photo Location Discovery Application"}
           title={"Shuttr"}
           body={
-            "A Photo Sharing and Location Discovery Application combining the Google Maps API with image sharing."
+            "A Photo Sharing and Location Discovery Application using the Google Maps API."
           }
           link={"https://www.github.com/philsmithies/shuttr"}
           react={true}
