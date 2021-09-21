@@ -28,7 +28,7 @@ const IndexPage = () => {
     xl: "1048px",
   });
 
-  const [isSmallerScreen] = useMediaQuery(`(max-width: 380px)`);
+  const [isSmallerScreen] = useMediaQuery(`(max-width: 425px)`);
 
   return (
     <Box backgroundColor="#1a202c">
