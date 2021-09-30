@@ -9,8 +9,15 @@ module.exports = {
     textColor: {
       teal100: "#B2F5EA",
       teal300: "#4FD1C5",
+      teal600: "#2C7A7B",
       secondary: "#ECC94B",
     },
+    backgroundColor: (theme) => ({
+      teal100: "#B2F5EA",
+      teal300: "#4FD1C5",
+      teal600: "#2C7A7B",
+      secondary: "#ECC94B",
+    }),
     extend: {},
   },
   variants: {
