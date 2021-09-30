@@ -26,7 +26,7 @@
     "components/ContactButtonBar.jsx",
     "components/Contact.jsx",
     "components/Card.jsx",
-    "components/ButtonBar.jsx",
+    "components/ButtonBar.tsx",
     "components/About.jsx",
     "pages/projects.jsx"
   ],
