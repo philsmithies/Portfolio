@@ -3,7 +3,6 @@ import profileImage from "../public/profileImage.jpg";
 import Image from "next/image";
 import styles from "../styles/About.module.css";
 import { useMediaQuery } from "@chakra-ui/react";
-
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 import { motion } from "framer-motion";
 
@@ -16,7 +15,7 @@ const About = () => {
     "2xl": "1200px",
   });
 
-  const [isSmallerScreen] = useMediaQuery(`(max-width: 380px)`);
+  const [isSmallerScreen] = useMediaQuery(`(max-width: 425px)`);
 
   return (
     <Flex

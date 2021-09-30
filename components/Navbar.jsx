@@ -1,53 +1,36 @@
-import {
-  Button,
-  Flex,
-  Box,
-  Spacer,
-  Heading,
-  // useColorMode,
-  // useColorModeValue,
-} from "@chakra-ui/react";
-import { IconButton } from "@chakra-ui/button";
 import Link from "next/link";
-import { FaSun, FaMoon } from "react-icons/fa";
 
 const Navbar = () => {
-  // const { colorMode, toggleColorMode } = useColorMode();
-  // const isDark = colorMode === "dark";
-
   return (
-    <Flex backgroundColor={"gray.900"}>
-      <Box pt="4">
+    <div className="bg-gray-900 flex flex-row items-center justify-between">
+      <div>
         <Link href="/" passHref>
-          <Heading
-            _hover={{
-              cursor: "pointer",
-              color: "teal.500",
-            }}
-            color={"teal.100"}
-            ml="6"
+          <h2
+            className="text-5xl font-bold text-yellow-400 font-body ml-6 cursor-auto text-red-300"
+            // _hover={{
+            //   cursor: "pointer",
+            //   color: "teal.500",
+            // }}
+            // color={"teal.100"}
+            // ml="6"
           >
             P
-          </Heading>
+          </h2>
         </Link>
-      </Box>
-      <Spacer />
-      <Box p="4">
+      </div>
+      <div className="p-4 justify-self-end">
         <Link href="/" passHref>
-          <Button mr="5">Home</Button>
+          <button className="bg-gray-800 hover:bg-gray-600 text-white font-semibold py-2 px-4 hover:border-gray-400 rounded shadow mr-5">
+            Home
+          </button>
         </Link>
         <Link href="/projects" passHref>
-          <Button>Projects</Button>
+          <button className="bg-gray-800 hover:bg-gray-600 text-white font-semibold py-2 px-4 hover:border-gray-400 rounded shadow mr-5">
+            Projects
+          </button>
         </Link>
-        {/* <IconButton
-          ml={5}
-          icon={isDark ? <FaSun /> : <FaMoon />}
-          isRound="true"
-          onClick={toggleColorMode}
-        ></IconButton> */}
-        {/* <Button mr="5">Projects</Button> */}
-      </Box>
-    </Flex>
+      </div>
+    </div>
   );
 };
 

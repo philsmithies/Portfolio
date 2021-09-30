@@ -1,9 +1,7 @@
 import {
-  Button,
   Flex,
   Text,
   Box,
-  Spacer,
   Heading,
   Link,
   useBreakpointValue,
@@ -11,7 +9,6 @@ import {
 import { useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import styles from "../styles/Home.module.css";
-
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 
 import Head from "next/head";
