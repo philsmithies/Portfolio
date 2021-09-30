@@ -18,20 +18,9 @@ const About = () => {
   const [isSmallerScreen] = useMediaQuery(`(max-width: 425px)`);
 
   return (
-    <Flex
-      alignItems="center"
-      justifyContent="center"
-      flexDirection={!isSmallerScreen ? "row" : "column"}
-      mr={{ md: 5 }}
-    >
-      <Box
-        mr={{ sm: 0, md: 2, lg: 10 }}
-        className={styles.profileText}
-        pb={{ sm: "4em" }}
-      >
-        <Heading as="h3" mb={5}>
-          About Me
-        </Heading>
+    <div className="flex flex-col md:flex-row md:mr-5 items-center">
+      <div className="pb-20 md:pb-0 md:mr-2, lg:mr-10">
+        <h3 className="mb-5 text-3xl font-bold">About Me</h3>
         <Text color="white" fontSize={{ sm: "1.2em", md: "1.3em" }}>
           Hey! I&apos;m Phil Smithies, I&apos;ve been interested in computers
           since I was small. I love building web applications and bringing my
@@ -49,7 +38,7 @@ const About = () => {
           I&apos;m a self certified Pho officiando and have been trying to
           perfect my own recipe. 🍜
         </Text>
-      </Box>
+      </div>
       <Box
         maxWidth={!isSmallerScreen ? "400px" : "150px"}
         mt={!isSmallerScreen ? 0 : "3em"}
@@ -58,7 +47,7 @@ const About = () => {
       >
         <Image src={profileImage} alt="Profile photo" />
       </Box>
-    </Flex>
+    </div>
   );
 };
 

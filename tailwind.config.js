@@ -6,6 +6,11 @@ module.exports = {
       display: ["Oswald", "Arial"],
       body: ['"Open Sans"', "Helvetica"],
     },
+    textColor: {
+      teal100: "#B2F5EA",
+      teal300: "#4FD1C5",
+      secondary: "#ECC94B",
+    },
     extend: {},
   },
   variants: {
