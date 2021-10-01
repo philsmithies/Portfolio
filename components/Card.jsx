@@ -1,91 +1,78 @@
-import {
-  Box,
-  Flex,
-  IconButton,
-  Image,
-  Badge,
-  Spacer,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import { Link } from "@chakra-ui/layout";
+import { Badge } from "@chakra-ui/react";
+import Link from "next/link";
+import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { MdLaunch } from "react-icons/md";
-import { useState, useEffect } from "react";
-import { useMediaQuery } from "@chakra-ui/react";
-export default function Card(props) {
-  const backgroundColor = "gray.800";
 
-  const [isSmallerScreen] = useMediaQuery(`(max-width: 600px)`);
-
+export default function Card({
+  imageUrl,
+  imageAlt,
+  title,
+  link,
+  react,
+  ruby,
+  javascript,
+  node,
+  body,
+  position = "top",
+}) {
   return (
-    <Box
-      maxW={props.size || "lg"}
-      borderWidth="1px"
-      borderRadius="lg"
-      overflow="hidden"
-      mt={5}
-    >
-      <Link href={props.link}>
-        <Image
-          margin={"0 auto"}
-          maxHeight={250}
-          height="auto"
-          width="100%"
-          src={props.imageUrl}
-          alt={props.imageAlt}
-        />
+    <div className="border-grey border-2 rounded w-100 overflow-hidden mb-5 min-h-full">
+      <Link href={link} passHref>
+        <div className="h-56 w-full">
+          <Image
+            src={imageUrl}
+            alt={imageAlt}
+            objectFit="cover"
+            objectPosition={position}
+            width="400"
+            height="250"
+            className="object-cover"
+          />
+        </div>
       </Link>
-      <Box p="5">
-        <Box fontWeight="semibold" as="h4" lineHeight="tight" color="white">
-          <Flex alignItems="center">
-            {props.title}
-            <Spacer />
-            <Link href={props.link}>
-              <IconButton
-                backgroundColor={backgroundColor}
-                aria-label="Github"
-                size="sm"
-                icon={<FaGithub />}
-              />
-            </Link>
-            <Link href={props.link}>
-              <IconButton
-                backgroundColor={backgroundColor}
-                aria-label="Launch"
-                size="sm"
-                icon={<MdLaunch />}
-              />
-            </Link>
-          </Flex>
-        </Box>
-        {props.react && !isSmallerScreen && (
+
+      <div className="mt-8 p-4">
+        <div className="font-bold text-white">
+          <div className="flex mb-2 justify-between">
+            {title}
+            <div>
+              <Link href={link} passHref>
+                <button className="ml-1 inline-flex items-center justify-center h-6 w-6 transition-colors duration-150 bg-gray-900 rounded-lg focus:shadow-outline hover:bg-teal600">
+                  <FaGithub className="h-4 w-4" />
+                </button>
+              </Link>
+              <Link href={link} passHref>
+                <button className="ml-1 inline-flex items-center justify-center h-6 w-6 transition-colors duration-150 bg-gray-900 rounded-lg focus:shadow-outline hover:bg-teal600">
+                  <MdLaunch className="h-4 w-4" />
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {react && (
           <Badge fontSize="0.8em" colorScheme="green">
             React
           </Badge>
         )}
-        {props.ruby && !isSmallerScreen && (
+        {ruby && (
           <Badge fontSize="0.8em" colorScheme="pink">
             Ruby on Rails
           </Badge>
         )}
-        {props.javascript && !isSmallerScreen && (
-          <Badge
-            ml={props.react || props.ruby ? 1 : ""}
-            fontSize="0.8em"
-            colorScheme="red"
-          >
+        {javascript && (
+          <Badge ml={react || ruby ? 1 : ""} fontSize="0.8em" colorScheme="red">
             Javascript
           </Badge>
         )}
-        {props.node && !isSmallerScreen && (
+        {node && (
           <Badge ml="1" fontSize="0.8em" colorScheme="orange">
             Node.JS
           </Badge>
         )}
-        <Box color="white" mt={2}>
-          {props.body}
-        </Box>
-      </Box>
-    </Box>
+        <p className="text-white mt-6 ">{body}</p>
+      </div>
+    </div>
   );
 }

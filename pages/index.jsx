@@ -1,44 +1,14 @@
-import {
-  Button,
-  Flex,
-  Text,
-  Box,
-  Spacer,
-  Heading,
-  Link,
-  useBreakpointValue,
-} from "@chakra-ui/react";
-import { useMediaQuery } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import styles from "../styles/Home.module.css";
-
-import { createBreakpoints } from "@chakra-ui/theme-tools";
-
 import Head from "next/head";
+import Link from "next/link";
 import Intro from "../components/Intro";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Card from "../components/Card";
 
 const IndexPage = () => {
-  const breakpoints = createBreakpoints({
-    sm: "320px",
-    md: "600px",
-    lg: "850px",
-    xl: "1048px",
-  });
-
-  const [isSmallerScreen] = useMediaQuery(`(max-width: 425px)`);
-
   return (
-    <Box backgroundColor="#1a202c">
-      <Flex
-        pt={"5%"}
-        alignItems="center"
-        flexDirection="column"
-        background={"gray.800"}
-        maxWidth="98%"
-      >
+    <div className="bg-gray-800 pt-5 flex flex-col w-full place-items-center h-full">
+      <div className="pt-10">
         <Head>
           <title>Phil Smithies: Dev</title>
           <meta
@@ -46,40 +16,25 @@ const IndexPage = () => {
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
-        <Box
-          width={!isSmallerScreen ? "80%" : "90%"}
-          maxWidth="800px"
-          mb={"15%"}
-        >
+        <div className="mb-15 max-w-screen-md">
           <Intro />
           <About />
-
-          <Flex
-            className={styles.flexDirectionDiv}
-            justifyContent="center"
-            alignItems="center"
-            mt={"10%"}
-            mb="15%"
-          >
-            <Flex direction="column" pt={10} mr={!isSmallerScreen ? "1em" : 0}>
-              <Box alignSelf="flex-start">
-                <Heading
-                  fontSize={!isSmallerScreen ? "52px" : "35px"}
-                  mr={!isSmallerScreen ? 10 : 0}
-                  color="white"
-                >
+          <div className="flex mb-10 items-center mt-40 ">
+            <div className="flex flex-col pt-10 md:mr-10  w-1/2">
+              <div>
+                <h2 className="text-5xl font-bold md:mr-10 text-white">
                   View my projects
-                </Heading>
-                <Text color="white">
+                </h2>
+                <p className="text-white">
                   All of my projects can be seen{" "}
-                  <Link color={"teal.400"} href="/projects">
-                    here
+                  <Link href="/projects" passHref>
+                    <p className="text-teal300">here</p>
                   </Link>
-                </Text>
-              </Box>
-              <Box mt={{ sm: 0, md: 10 }}>
+                </p>
+              </div>
+              <div className="md:mt-10">
                 <Card
-                  imageUrl={"./preview_map.png"}
+                  imageUrl={"/preview_map.png"}
                   imageAlt={"Shuttr - A Photo Location Discovery Application"}
                   title={"Shuttr"}
                   body={
@@ -90,12 +45,12 @@ const IndexPage = () => {
                   javascript={true}
                   node={true}
                 />
-              </Box>
-            </Flex>
-            <Flex direction="column" mr={!isSmallerScreen ? "1em" : 0}>
-              <Box>
+              </div>
+            </div>
+            <div className="flex flex-col w-1/2">
+              <div>
                 <Card
-                  imageUrl="./chitter.png"
+                  imageUrl="/chitter.png"
                   imageAlt={"Chitter - A Twitter Clone"}
                   title={"Chitter"}
                   body={
@@ -106,10 +61,10 @@ const IndexPage = () => {
                   javascript={true}
                   node={true}
                 />
-              </Box>
-              <Box>
+              </div>
+              <div>
                 <Card
-                  imageUrl={"./cv_generator.png"}
+                  imageUrl={"/cv_generator.png"}
                   imageAlt={"CV Generator"}
                   title={"CV Generator"}
                   body={
@@ -119,13 +74,13 @@ const IndexPage = () => {
                   react={true}
                   javascript={true}
                 />
-              </Box>
-            </Flex>
-          </Flex>
+              </div>
+            </div>
+          </div>
           <Contact />
-        </Box>
-      </Flex>
-    </Box>
+        </div>
+      </div>
+    </div>
   );
 };
 

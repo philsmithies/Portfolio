@@ -1,53 +1,30 @@
-import {
-  Button,
-  Flex,
-  Box,
-  Spacer,
-  Heading,
-  // useColorMode,
-  // useColorModeValue,
-} from "@chakra-ui/react";
-import { IconButton } from "@chakra-ui/button";
 import Link from "next/link";
-import { FaSun, FaMoon } from "react-icons/fa";
 
 const Navbar = () => {
-  // const { colorMode, toggleColorMode } = useColorMode();
-  // const isDark = colorMode === "dark";
-
   return (
-    <Flex backgroundColor={"gray.900"}>
-      <Box pt="4">
+    <div className="flex flex-row items-center justify-between">
+      <div>
         <Link href="/" passHref>
-          <Heading
-            _hover={{
-              cursor: "pointer",
-              color: "teal.500",
-            }}
-            color={"teal.100"}
-            ml="6"
-          >
-            P
-          </Heading>
+          <h2 className="text-4xl font-bold font-body ml-6 cursor-pointer pb-1">
+            <span className="text-5xl text-secondary">&#123;</span>
+            <span className="text-teal300">PS</span>
+            <span className="text-5xl text-secondary">&#125;</span>
+          </h2>
         </Link>
-      </Box>
-      <Spacer />
-      <Box p="4">
+      </div>
+      <div className="p-4 justify-self-end align-middle">
         <Link href="/" passHref>
-          <Button mr="5">Home</Button>
+          <button className="bg-gray-800 hover:bg-gray-600 text-white font-semibold py-2 px-4 hover:border-gray-400 rounded shadow mr-2">
+            Home
+          </button>
         </Link>
         <Link href="/projects" passHref>
-          <Button>Projects</Button>
+          <button className="bg-gray-800 hover:bg-gray-600 text-white font-semibold py-2 px-4 hover:border-gray-400 rounded shadow">
+            Projects
+          </button>
         </Link>
-        {/* <IconButton
-          ml={5}
-          icon={isDark ? <FaSun /> : <FaMoon />}
-          isRound="true"
-          onClick={toggleColorMode}
-        ></IconButton> */}
-        {/* <Button mr="5">Projects</Button> */}
-      </Box>
-    </Flex>
+      </div>
+    </div>
   );
 };
 
