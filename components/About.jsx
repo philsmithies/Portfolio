@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="flex flex-col mx-auto md:flex-row items-center max-w-screen-lg">
+    <div className="flex flex-col mx-auto md:flex-row items-center max-w-screen-lg mt-20 md:mt-0">
       <div className="pb-20 md:pb-0 md:mr-2 md:max-w-1/2">
         <h3 className="mb-5 text-3xl font-bold">About Me</h3>
         <p className="text-white text-xl font-light">
@@ -26,7 +26,7 @@ const About = () => {
         </p>
       </div>
       <div className="mt-3 h-96 md:mt-0 max-w-1/2 sm:max-w-xs md:max-w-1/4 md:ml-5 ">
-        <div className="absolute ml-48 md:ml-20 sm:w-40 w-60 max-w-1/2 opacity-80 z-0">
+        <div className="absolute ml-20 sm:ml-48 md:ml-20 w-30 sm:w-40 lg:w-60 max-w-1/2 opacity-80 z-0 overflow-hidden">
           <Image width="400" height="400" src="/dots.svg" alt="Dots" />
         </div>
         <div className="mt-8">

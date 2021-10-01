@@ -20,20 +20,20 @@ const IndexPage = () => {
           <div className="mb-15 max-w-7xl">
             <Intro />
             <About />
-            <div className="flex mb-10 items-center mt-40 ">
-              <div className="flex flex-col pt-10 md:mr-10  w-1/2">
+            <div className="flex flex-col md:flex-row mb-10 items-center md:mt-40">
+              <div className="flex flex-col pt-10 md:w-1/2 lg:mr-5">
                 <div>
-                  <h2 className="text-5xl font-bold md:mr-10 text-white">
+                  <h2 className="text-5xl font-bold lg:mr-10 text-white">
                     View my projects
                   </h2>
-                  <p className="text-white">
+                  <p className="text-white ml-2 md:ml-0 mb-10 md:mb-0">
                     All of my projects can be seen{" "}
                     <Link href="/projects" passHref>
-                      <p className="text-teal300">here</p>
+                      <span className="text-teal300">here</span>
                     </Link>
                   </p>
                 </div>
-                <div className="md:mt-10">
+                <div className="md:mt-10 min-w-min w-96 md:mr-4">
                   <Card
                     imageUrl={"/preview_map.png"}
                     imageAlt={"Shuttr - A Photo Location Discovery Application"}
@@ -48,8 +48,8 @@ const IndexPage = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-col w-1/2">
-                <div>
+              <div className="flex flex-col md:w-1/2">
+                <div className=" min-w-min w-96">
                   <Card
                     imageUrl="/chitter.png"
                     imageAlt={"Chitter - A Twitter Clone"}
@@ -63,7 +63,7 @@ const IndexPage = () => {
                     node={true}
                   />
                 </div>
-                <div>
+                <div className="min-w-min w-96">
                   <Card
                     imageUrl={"/cv_generator.png"}
                     imageAlt={"CV Generator"}
