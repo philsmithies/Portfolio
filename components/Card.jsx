@@ -73,7 +73,7 @@ export default function Card({
             Node.JS
           </Badge>
         )}
-        <p className="text-white mt-2 md:mt-6 ">{body}</p>
+        <p className="text-white mt-2 md:mt-3 ">{body}</p>
       </div>
     </div>
   );

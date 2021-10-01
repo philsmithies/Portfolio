@@ -20,12 +20,18 @@ module.exports = {
         secondary: "#ECC94B",
         backgroundColor: "#1a202c",
       },
-      gridTemplateRows: {
-        // Simple 8 row grid
-        10: "repeat(2, 380px)",
-
-        // Complex site-specific row configuration
-        layout: "200px minmax(900px, 1fr) 100px",
+      maxWidth: {
+        "1/4": "25%",
+        "1/2": "50%",
+        "3/4": "75%",
+      },
+      fontSize: {
+        "1vw": "1vw",
+        "2vw": "2vw",
+        "6vw": "6vw",
+      },
+      margin: {
+        minus: "-1rem",
       },
     },
   },

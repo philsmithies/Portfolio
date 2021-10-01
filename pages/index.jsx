@@ -8,7 +8,7 @@ import Card from "../components/Card";
 const IndexPage = () => {
   return (
     <div className="bg-black">
-      <div className="pt-5 flex flex-col w-11/12 md:w-full place-items-center h-full mx-auto">
+      <div className="pt-5 flex flex-col w-11/12 lg:max-w-screen-2xl place-items-center h-full mx-auto">
         <div className="pt-10">
           <Head>
             <title>Phil Smithies: Dev</title>
@@ -17,7 +17,7 @@ const IndexPage = () => {
               content="initial-scale=1.0, width=device-width"
             />
           </Head>
-          <div className="mb-15 max-w-screen-md">
+          <div className="mb-15 max-w-7xl">
             <Intro />
             <About />
             <div className="flex mb-10 items-center mt-40 ">
