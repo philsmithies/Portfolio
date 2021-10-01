@@ -1,11 +1,18 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Intro from "../components/Intro";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Card from "../components/Card";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const IndexPage = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="bg-black">
       <div className="pt-5 flex flex-col w-11/12 lg:max-w-screen-2xl place-items-center h-full mx-auto">
@@ -22,7 +29,11 @@ const IndexPage = () => {
             <About />
             <div className="flex flex-col md:flex-row mb-10 lg:ml-10 items-center md:mt-40">
               <div className="flex flex-col pt-10 md:w-1/2 lg:mr-5 items-center">
-                <div>
+                <div
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="500"
+                >
                   <h2 className="text-5xl font-bold lg:mr-10 text-white">
                     View my projects
                   </h2>
@@ -33,7 +44,10 @@ const IndexPage = () => {
                     </Link>
                   </p>
                 </div>
-                <div className="md:mt-10 min-w-min w-96 md:mr-4">
+                <div
+                  className="md:mt-10 min-w-min w-96 md:mr-4"
+                  data-aos="fade-in"
+                >
                   <Card
                     imageUrl={"/preview_map.png"}
                     imageAlt={"Shuttr - A Photo Location Discovery Application"}
@@ -48,7 +62,7 @@ const IndexPage = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-col md:w-1/2">
+              <div className="flex flex-col md:w-1/2" data-aos="fade-in">
                 <div className=" min-w-min w-96">
                   <Card
                     imageUrl="/chitter.png"
@@ -79,7 +93,14 @@ const IndexPage = () => {
                 </div>
               </div>
             </div>
-            <Contact />
+            <div
+              data-aos="fade-in"
+              data-aos-easing="linear"
+              data-aos-duration="1000"
+            >
+              {" "}
+              <Contact />
+            </div>
           </div>
         </div>
       </div>
