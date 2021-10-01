@@ -14,25 +14,27 @@ export default function Card({
   javascript,
   node,
   body,
+  width = "400",
+  height = "250",
   position = "top",
 }) {
   return (
     <div className="border-grey border-2 rounded w-100 overflow-hidden mb-5 min-h-full">
       <Link href={link} passHref>
-        <div className="h-56 w-full">
+        <div className="sm:h-46 md:h-56 w-full cursor-pointer">
           <Image
             src={imageUrl}
             alt={imageAlt}
             objectFit="cover"
             objectPosition={position}
-            width="400"
-            height="250"
+            width={width}
+            height={height}
             className="object-cover"
           />
         </div>
       </Link>
 
-      <div className="mt-8 p-4">
+      <div className="sm:mt-1 md:mt-4 lg:mt-8 p-3 lg:p-4">
         <div className="font-bold text-white">
           <div className="flex mb-2 justify-between">
             {title}
@@ -71,7 +73,7 @@ export default function Card({
             Node.JS
           </Badge>
         )}
-        <p className="text-white mt-6 ">{body}</p>
+        <p className="text-white mt-2 md:mt-6 ">{body}</p>
       </div>
     </div>
   );

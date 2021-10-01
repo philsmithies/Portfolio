@@ -8,7 +8,8 @@ const Projects = () => {
         <title>Projects</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="h-full w-10/12 mb-40 flex flex-col md:grid md:grid-flow-col md:grid-rows-3 md:gap-4 border-white justify-evenly">
+      <h2 className="text-teal300 text-4xl mb-10">RECENT PROJECTS</h2>
+      <div className="h-full w-8/12 mb-36 lg:mb-40 flex flex-col lg:grid lg:grid-flow-col lg:grid-rows-3 lg:gap-4 border-white justify-evenly min-w-min max-w-sm lg:max-w-3xl">
         <Card
           imageUrl={"/preview_map.png"}
           imageAlt={"Shuttr - A Photo Location Discovery Application"}
@@ -32,6 +33,7 @@ const Projects = () => {
           javascript={true}
           node={true}
         />
+
         <Card
           imageUrl={"/cv_generator.png"}
           imageAlt={"CV Generator - A CV Generator in React"}
@@ -65,17 +67,6 @@ const Projects = () => {
           react={true}
           javascript={true}
           position={"bottom"}
-        />
-        <Card
-          imageUrl={"/bookface.jpg"}
-          imageAlt={"Bookface"}
-          title={"Bookface"}
-          body={
-            "A full-stack web app inspired by the functionality of Facebook."
-          }
-          link={"https://github.com/philsmithies/acebook-team-smiley-face"}
-          ruby={true}
-          javascript={true}
         />
       </div>
     </div>
