@@ -10,7 +10,7 @@ const ButtonBar = () => {
         rel="noopener noreferrer"
         passHref
       >
-        <button className="mr-2 bg-gray-900 hover:bg-gray-700 text-white font-semibold py-2 px-4 hover:border-gray-400 rounded shadow flex items-center">
+        <button className="mr-2 bg-gray-900 transition duration-300 hover:bg-gray-700 text-white font-semibold py-2 px-4 hover:border-gray-400 rounded shadow flex items-center">
           <FaGithub className="mr-2" />
           Github
         </button>
@@ -21,13 +21,13 @@ const ButtonBar = () => {
         href="https://www.linkedin.com/in/phil-smithies/"
         passHref
       >
-        <button className="mr-2 bg-gray-900 hover:bg-gray-600 text-white font-semibold py-2 px-4 hover:border-gray-400 rounded shadow flex items-center">
+        <button className="mr-2 bg-gray-900 transition duration-300 hover:bg-gray-600 text-white font-semibold py-2 px-4 hover:border-gray-400 rounded shadow flex items-center">
           <FaLinkedin className="mr-2" />
           Linkedin
         </button>
       </Link>
       <Link href="mailto:philsmithies@gmail.com" passHref>
-        <button className="mr-2 bg-gray-900 hover:bg-gray-600 text-white font-semibold py-2 px-4 hover:border-gray-400 rounded shadow flex items-center">
+        <button className="mr-2 bg-gray-900 transition duration-300 hover:bg-gray-600 text-white font-semibold py-2 px-4 hover:border-gray-400 rounded shadow flex items-center">
           <FaEnvelope className="mr-2" />
           Email
         </button>

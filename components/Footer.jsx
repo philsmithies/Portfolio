@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="relative ">
-      <div className="pt-6 absolute bottom-0 w-full pb-5 flex flex-col items-center bg-gray-900">
+      <div className="pt-6 absolute bottom-0 w-full pb-6 flex flex-col items-center bg-black border-t-2 border-gray-900">
         <div className="flex items-center ">
           Developed by&nbsp;
           <Link href="https://github.com/philsmithies" passHref>
