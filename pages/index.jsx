@@ -20,8 +20,8 @@ const IndexPage = () => {
           <div className="mb-15 max-w-7xl">
             <Intro />
             <About />
-            <div className="flex flex-col md:flex-row mb-10 items-center md:mt-40">
-              <div className="flex flex-col pt-10 md:w-1/2 lg:mr-5">
+            <div className="flex flex-col md:flex-row mb-10 lg:ml-10 items-center md:mt-40">
+              <div className="flex flex-col pt-10 md:w-1/2 lg:mr-5 items-center">
                 <div>
                   <h2 className="text-5xl font-bold lg:mr-10 text-white">
                     View my projects
@@ -65,15 +65,16 @@ const IndexPage = () => {
                 </div>
                 <div className="min-w-min w-96">
                   <Card
-                    imageUrl={"/cv_generator.png"}
-                    imageAlt={"CV Generator"}
-                    title={"CV Generator"}
+                    imageUrl={"/clockapp.png"}
+                    imageAlt={"ClockApp"}
+                    title={"Clock App"}
                     body={
-                      "A dynamic CV Generator written in React, written utilizing React Hooks"
+                      "A mobile first Clock App complete with CSS animations and API calls. Built in Next.JS and with TailwindCSS"
                     }
-                    link={"https://github.com/philsmithies/cv-generator/"}
+                    link={"https://github.com/philsmithies/clockapp"}
                     react={true}
                     javascript={true}
+                    position={"bottom"}
                   />
                 </div>
               </div>
