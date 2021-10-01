@@ -1,30 +1,11 @@
-import {
-  Flex,
-  Text,
-  Box,
-  Heading,
-  Link,
-  useBreakpointValue,
-} from "@chakra-ui/react";
-import { useMediaQuery } from "@chakra-ui/react";
-import { createBreakpoints } from "@chakra-ui/theme-tools";
-
 import Head from "next/head";
+import Link from "next/link";
 import Intro from "../components/Intro";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Card from "../components/Card";
 
 const IndexPage = () => {
-  const breakpoints = createBreakpoints({
-    sm: "320px",
-    md: "600px",
-    lg: "850px",
-    xl: "1048px",
-  });
-
-  const [isSmallerScreen] = useMediaQuery(`(max-width: 425px)`);
-
   return (
     <div className="bg-gray-800 pt-5 flex flex-col w-full place-items-center h-full">
       <div className="pt-10">
@@ -35,25 +16,25 @@ const IndexPage = () => {
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
-        <div className="mb-15 max-w-3xl">
+        <div className="mb-15 max-w-screen-md">
           <Intro />
           <About />
-          <div className="flex mb-10 items-center mt-10">
-            <div className="flex flex-col pt-10 md:mr-10">
+          <div className="flex mb-10 items-center mt-40 ">
+            <div className="flex flex-col pt-10 md:mr-10  w-1/2">
               <div>
                 <h2 className="text-5xl font-bold md:mr-10 text-white">
                   View my projects
                 </h2>
                 <p className="text-white">
                   All of my projects can be seen{" "}
-                  <Link href="/projects">
+                  <Link href="/projects" passHref>
                     <p className="text-teal300">here</p>
                   </Link>
                 </p>
               </div>
-              <div className="md:mt-5">
+              <div className="md:mt-10">
                 <Card
-                  imageUrl={"./preview_map.png"}
+                  imageUrl={"/preview_map.png"}
                   imageAlt={"Shuttr - A Photo Location Discovery Application"}
                   title={"Shuttr"}
                   body={
@@ -66,10 +47,10 @@ const IndexPage = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col md:mr-10">
+            <div className="flex flex-col w-1/2">
               <div>
                 <Card
-                  imageUrl="./chitter.png"
+                  imageUrl="/chitter.png"
                   imageAlt={"Chitter - A Twitter Clone"}
                   title={"Chitter"}
                   body={
@@ -83,7 +64,7 @@ const IndexPage = () => {
               </div>
               <div>
                 <Card
-                  imageUrl={"./cv_generator.png"}
+                  imageUrl={"/cv_generator.png"}
                   imageAlt={"CV Generator"}
                   title={"CV Generator"}
                   body={
