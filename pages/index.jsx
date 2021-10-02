@@ -16,7 +16,7 @@ const IndexPage = () => {
   return (
     <div className="bg-black">
       <div className="pt-5 flex flex-col w-11/12 lg:max-w-screen-2xl place-items-center h-full mx-auto">
-        <div className="pt-10">
+        <div className="pt-10 md:pt-32">
           <Head>
             <title>Phil Smithies: Dev</title>
             <meta
@@ -24,9 +24,11 @@ const IndexPage = () => {
               content="initial-scale=1.0, width=device-width"
             />
           </Head>
-          <div className="mb-15 max-w-7xl">
-            <Intro />
-            <About />
+          <div className=" md:mt-30 mb-15 max-w-7xl">
+            <div className="md:ml-20">
+              <Intro />
+              <About />
+            </div>
             <div className="flex flex-col md:flex-row mb-10 lg:ml-10 items-center md:mt-40">
               <div className="flex flex-col pt-10 md:w-1/2 lg:mr-5 items-center">
                 <div
@@ -37,7 +39,7 @@ const IndexPage = () => {
                   <h2 className="text-5xl font-bold lg:mr-10 text-white">
                     View my projects
                   </h2>
-                  <p className="text-white ml-2 md:ml-0 mb-10 md:mb-0">
+                  <p className="text-white ml-2 mb-10 md:mb-0">
                     All of my projects can be seen{" "}
                     <Link href="/projects" passHref>
                       <span className="text-teal300">here</span>
@@ -97,6 +99,7 @@ const IndexPage = () => {
               data-aos="fade-in"
               data-aos-easing="linear"
               data-aos-duration="1000"
+              className="md:pt-32 md:mb-64"
             >
               {" "}
               <Contact />

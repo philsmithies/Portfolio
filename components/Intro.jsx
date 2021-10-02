@@ -27,33 +27,31 @@ const Intro = () => {
           </h2>
         </div>
         <h2
-          className="text-3xl md:text-2vw xl:text-2xl"
+          className="text-white text-xl mt-3 mb-3 md:text-2vw xl:text-2xl"
           data-aos="fade-zoom-in"
           data-aos-easing="ease-in-back"
           data-aos-delay="100"
           data-aos-duration="1000"
           data-aos-offset="0"
         >
-          Full Stack Web Dev.
+          Full Stack Web Dev. Time Person of the Year 2006.
         </h2>
         <div
           data-aos="fade-zoom-in"
           data-aos-easing="ease-in-back"
-          data-aos-delay="400"
+          data-aos-delay="100"
           data-aos-duration="1000"
           data-aos-offset="0"
         >
-          <h3 className="text-white mt-3 mb-3 md:text-2vw xl:text-2xl">
-            React & Node.JS. Specializing in building clean and stylish web
-            applications.
+          <h3 className="text-white text-xl mt-3 mb-3 md:text-2vw xl:text-2xl">
+            Building modern web applications.
           </h3>
           <h2 className="text-white text-xl md:text-2vw xl:text-2xl mt-5">
-            → &nbsp;Currently building a <strong>language learning</strong>{" "}
-            application in React Native.
+            → &nbsp;Currently looking for remote collaboration opportunities.
           </h2>
           <br />
           <h2 className="text-white text-xl md:text-2vw xl:text-2xl">
-            → &nbsp;Makers Academy Alumni
+            → &nbsp; React, Next.js & Node.js.
           </h2>
         </div>
         <div
