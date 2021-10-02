@@ -1,5 +1,7 @@
 ## Portfolio - [philsmithies.dev](https://www.philsmithies.dev/)
 
+![ReadmeImg](./readme_img.png)
+
 - Portfolio built to showcase my projects. It was built on top of Next.js for SSR as well as all the nice extras that Next.JS has such as lazy loading on the each of the images.
 
 - Using Tailwind CSS for the styling. Originally I created the site using Chakra UI but found that I couldn't customize it easily enough so then I rebuilt the site again within TailwindCSS. It has been a breeze to use - it's even won me over on inline styling. You can build the app up very similar to how you would do with styled components in React.
