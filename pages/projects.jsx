@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import Card from "../components/Card";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Projects = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="bg-black pt-10">
       <div className="flex flex-col items-center">
@@ -13,7 +19,12 @@ const Projects = () => {
           />
         </Head>
         <h2 className="text-white text-4xl mb-10">RECENT PROJECTS</h2>
-        <div className="h-full w-8/12 mb-36 lg:mb-40 flex flex-col lg:grid lg:grid-flow-col lg:grid-rows-3 lg:gap-4 border-white justify-evenly min-w-min max-w-sm lg:max-w-3xl">
+        <div
+          data-aos="fade"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+          className="h-full w-8/12 mb-36 lg:mb-40 flex flex-col lg:grid lg:grid-flow-col lg:grid-rows-3 lg:gap-4 border-white justify-evenly min-w-min max-w-sm lg:max-w-3xl "
+        >
           <div className="md:mt-5 min-w-min w-96">
             <Card
               imageUrl={"/preview_map.png"}
