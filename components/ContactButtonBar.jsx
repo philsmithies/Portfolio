@@ -10,14 +10,14 @@ const ContactButtonBar = () => {
         href="https://www.linkedin.com/in/phil-smithies/"
         passHref
       >
-        <button className="mr-2 bg-red transition hover:bg-gray-600 text-white font-semibold py-2 px-4 hover:border-gray-400 rounded shadow flex items-center">
-          <FaLinkedin className="mr-2" />
+        <button className="mr-2 transition hover:bg-gray-600 text-white font-semibold py-2 px-4 hover:border-gray-400 rounded shadow flex items-center">
+          <FaLinkedin className="mr-2 text-teal300" />
           Linkedin
         </button>
       </Link>
       <Link href="mailto:philsmithies@gmail.com" passHref>
-        <button className="mr-2 bg-red transition hover:bg-gray-600 text-white font-semibold py-2 px-4 hover:border-gray-400 rounded shadow flex items-center">
-          <FaEnvelope className="mr-2" />
+        <button className="mr-2 transition hover:bg-gray-600 text-white font-semibold py-2 px-4 hover:border-gray-400 rounded shadow flex items-center">
+          <FaEnvelope className="mr-2 text-teal300" />
           Email
         </button>
       </Link>
@@ -25,8 +25,8 @@ const ContactButtonBar = () => {
         href="https://drive.google.com/file/d/1sdhTg7cy4NM-EndOXl0QXX9CxvIG9o3V/view?usp=sharing"
         passHref
       >
-        <button className="mr-2 bg-red transition hover:bg-gray-600 text-white font-semibold py-2 px-4 hover:border-gray-400 rounded shadow flex items-center">
-          <FaFile className="mr-2" />
+        <button className="mr-2 transition hover:bg-gray-600 font-semibold py-2 px-4 hover:border-gray-400 rounded shadow flex items-center">
+          <FaFile className="mr-2 text-teal300" />
           CV
         </button>
       </Link>
