@@ -7,7 +7,7 @@ const About = () => {
       <div className="pb-20 md:pb-0 md:mr-2 md:max-w-1/2">
         <h3 className="mb-5 text-3xl font-bold">About Me</h3>
         <p className="text-white text-xl font-light">
-          Hey! I&apos;m Phil Smithies. France based Brit. I love building web
+          Hey! I&apos;m Phil Smithies - France based Brit. I love building web
           applications and bringing my ideas into a full fledged product.
         </p>
         <br />
@@ -20,7 +20,7 @@ const About = () => {
         </p>
         <br />
         <p className="text-white text-xl font-light">
-          Self certified Pho expert and currently on a mission perfect my own
+          Self certified pho expert and currently on a mission to perfect my own
           recipe. 🍜
         </p>
       </div>
