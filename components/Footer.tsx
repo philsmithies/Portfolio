@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 
-const Footer = () => {
+const Footer: React.FunctionComponent = () => {
   return (
     <div className="relative ">
       <div className="pt-5 pb-5 absolute bottom-0 w-full flex flex-col items-center bg-black border-t-2 border-gray-900">
@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="flex">
           <p className="text-white">
             Built with{" "}
-            <Link className="text-teal300" href="https://nextjs.org/" passHref>
+            <Link href="https://nextjs.org/" passHref>
               <p className="inline-block text-teal300 hover:text-teal600 cursor-pointer">
                 Next.JS
               </p>
@@ -33,7 +33,7 @@ const Footer = () => {
               </p>
             </Link>{" "}
             Hosted on{" "}
-            <Link className="text-teal300" href="https://vercel.com/" passHref>
+            <Link href="https://vercel.com/" passHref>
               <p className="inline-block text-teal300 hover:text-teal600 cursor-pointer">
                 Vercel
               </p>

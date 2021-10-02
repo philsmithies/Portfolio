@@ -3,7 +3,7 @@ import ContactButtonBar from "./ContactButtonBar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Contact = () => {
+const Contact: React.FunctionComponent = () => {
   useEffect(() => {
     AOS.init();
   }, []);

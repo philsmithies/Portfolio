@@ -4,6 +4,21 @@ import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { MdLaunch } from "react-icons/md";
 
+type CardProps = {
+  imageUrl: string;
+  imageAlt: string;
+  title: string;
+  link: string;
+  react: boolean;
+  ruby: boolean;
+  javascript: boolean;
+  node: boolean;
+  body: string;
+  width: number;
+  height: number;
+  position: string;
+};
+
 export default function Card({
   imageUrl,
   imageAlt,
@@ -14,10 +29,10 @@ export default function Card({
   javascript,
   node,
   body,
-  width = "400",
-  height = "250",
+  width = 400,
+  height = 250,
   position = "top",
-}) {
+}: CardProps) {
   return (
     <div className="border-grey border-2 rounded w-100 overflow-hidden mb-5 min-h-full">
       <Link href={link} passHref>

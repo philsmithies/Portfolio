@@ -1,11 +1,9 @@
-import { Text } from "@chakra-ui/react";
 import { useEffect } from "react";
 import ButtonBar from "./ButtonBar";
-import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Intro = () => {
+const Intro: React.FunctionComponent = () => {
   useEffect(() => {
     AOS.init();
   }, []);

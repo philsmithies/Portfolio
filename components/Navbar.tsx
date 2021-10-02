@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar: React.FunctionComponent = () => {
   return (
     <div className="flex flex-row items-center justify-between bg-black border-b-2 border-gray-900">
       <div>

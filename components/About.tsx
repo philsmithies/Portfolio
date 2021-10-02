@@ -1,7 +1,7 @@
 import profileImage from "../public/profileImage.jpg";
 import Image from "next/image";
 
-const About = () => {
+const About: React.FunctionComponent = () => {
   return (
     <div className="flex flex-col mx-auto md:flex-row items-center max-w-screen-lg mt-10 md:mt-20">
       <div className="pb-20 md:pb-0 md:mr-2 md:max-w-1/2">
