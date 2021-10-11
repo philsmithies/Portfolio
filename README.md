@@ -17,4 +17,4 @@
 
 - Integration with [Sanity.io](https://www.sanity.io/) as a CMS for easily changeable content on the card components.
 - Blog posts for my dev ramblings with a link between the site and Dev.to.
-- Animations either using React Scroll on NPM or Framer.
+- ~~Animations either using React Scroll on NPM or Framer.~~
