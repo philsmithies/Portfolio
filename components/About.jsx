@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="flex flex-col mx-auto md:flex-row items-center max-w-screen-lg mt-10 md:mt-20">
       <div className="pb-20 md:pb-0 md:mr-2 md:max-w-1/2">
-        <h3 className="mb-5 text-3xl font-bold">About Me</h3>
+        <h3 className="mb-5 text-3xl font-bold text-white">About Me</h3>
         <p className="text-white text-xl font-light">
           Hey! I&apos;m Phil Smithies - France based Brit. I love building web
           applications and bringing my ideas into a full fledged product.

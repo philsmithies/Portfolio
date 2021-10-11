@@ -23,7 +23,7 @@ const Projects = () => {
           data-aos="fade"
           data-aos-easing="linear"
           data-aos-duration="1500"
-          className="h-full w-8/12 mb-36 lg:mb-40 flex flex-col lg:grid lg:grid-flow-col lg:grid-rows-3 lg:gap-4 border-white justify-evenly min-w-min max-w-sm lg:max-w-3xl "
+          className="h-full w-8/12 mb-36 lg:mb-40 flex flex-col items-center gap-4 border-white justify-evenly min-w-min max-w-sm lg:max-w-3xl "
         >
           <div className="md:mt-5 min-w-min w-96">
             <Card
