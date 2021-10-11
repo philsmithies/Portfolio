@@ -34,7 +34,7 @@ const Intro = () => {
           data-aos-duration="1000"
           data-aos-offset="0"
         >
-          Full Stack Web Dev. Time Person of the Year 2006.
+          Full Stack Web Dev. 
         </h2>
         <div
           data-aos="fade-zoom-in"
