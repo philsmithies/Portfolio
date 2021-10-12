@@ -21,10 +21,7 @@ const ContactButtonBar = () => {
           Email
         </button>
       </Link>
-      <Link
-        href="https://drive.google.com/file/d/1sdhTg7cy4NM-EndOXl0QXX9CxvIG9o3V/view?usp=sharing"
-        passHref
-      >
+      <Link href="/CV" passHref>
         <button className="mr-2 transition hover:bg-gray-600 font-semibold py-2 px-4 hover:border-gray-400 rounded shadow flex items-center text-white">
           <FaFile className="mr-2 text-teal300" />
           CV
