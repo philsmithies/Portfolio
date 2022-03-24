@@ -34,7 +34,7 @@ const IndexPage = () => {
                 <div
                   data-aos="fade-down"
                   data-aos-easing="linear"
-                  data-aos-duration="500"
+                  data-aos-duration="1000"
                 >
                   <h2 className="text-5xl font-bold lg:mr-10 text-white">
                     View my projects
@@ -51,6 +51,22 @@ const IndexPage = () => {
                   data-aos="fade-in"
                 >
                   <Card
+                    imageUrl="/gated-home-wide.png"
+                    imageAlt={"Gated Records"}
+                    title={"Gated Records"}
+                    body={
+                      "Gated Records - Record Label E-Commerce built using Typescript and Next.js"
+                    }
+                    link={"https://github.com/philsmithies/gated-recs-next-js"}
+                    react={true}
+                    javascript={true}
+                    node={true}
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col md:w-1/2" data-aos="fade-in">
+                <div className=" min-w-min w-96">
+                  <Card
                     imageUrl={"/preview_map.png"}
                     imageAlt={"Shuttr - A Photo Location Discovery Application"}
                     title={"Shuttr"}
@@ -63,33 +79,18 @@ const IndexPage = () => {
                     node={true}
                   />
                 </div>
-              </div>
-              <div className="flex flex-col md:w-1/2" data-aos="fade-in">
-                <div className=" min-w-min w-96">
+                <div className="min-w-min w-96">
                   <Card
-                    imageUrl="/chitter.png"
-                    imageAlt={"Chitter - A Twitter Clone"}
-                    title={"Chitter"}
+                    imageUrl={"/maelys-home-wide.png"}
+                    imageAlt={"Maelys Portfolio"}
+                    title={"Maëlys Chay - Illustration Portfolio"}
                     body={
-                      "A Popular Social Media Clone built using the MERN Stack."
+                      "An illustrators portfolio built using Next.js & Typescript 🎨 Sanity.io Headless CMS. Tailwind CSS."
                     }
-                    link={"https://www.github.com/philsmithies/chitter-react"}
+                    link={"https://github.com/philsmithies/maelys_portfolio"}
                     react={true}
                     javascript={true}
                     node={true}
-                  />
-                </div>
-                <div className="min-w-min w-96">
-                  <Card
-                    imageUrl={"/clockapp.png"}
-                    imageAlt={"ClockApp"}
-                    title={"Clock App"}
-                    body={
-                      "A mobile first Clock App complete with CSS animations and API calls. Built in Next.JS and with TailwindCSS"
-                    }
-                    link={"https://github.com/philsmithies/clockapp"}
-                    react={true}
-                    javascript={true}
                     position={"bottom"}
                   />
                 </div>

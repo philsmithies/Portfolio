@@ -67,19 +67,6 @@ const Projects = () => {
           </div>
           <div className="md:mt-5 min-w-min w-96">
             <Card
-              imageUrl={"/bookface.jpg"}
-              imageAlt={"Bookface"}
-              title={"Bookface"}
-              body={
-                "A full-stack web app inspired by the functionality of Facebook."
-              }
-              link={"https://github.com/philsmithies/acebook-team-smiley-face"}
-              ruby={true}
-              javascript={true}
-            />
-          </div>
-          <div className="md:mt-5 min-w-min w-96">
-            <Card
               imageUrl={"/clockapp.png"}
               imageAlt={"ClockApp"}
               title={"Clock App"}
