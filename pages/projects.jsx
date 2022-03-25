@@ -11,7 +11,8 @@ const Projects = () => {
 
   return (
     <div className="bg-black pt-10">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center w-full">
+        <h2 className="text-white text-4xl mb-10 mx-auto">PROJECTS</h2>
         <Head>
           <title>Projects</title>
           <meta
@@ -19,14 +20,14 @@ const Projects = () => {
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
-        <h2 className="text-white text-4xl mb-10">RECENT PROJECTS</h2>
+
         <div
           data-aos="fade"
           data-aos-easing="linear"
           data-aos-duration="1500"
-          className="h-full w-8/12 mb-36 lg:mb-40 flex flex-col items-center gap-4 border-white justify-evenly min-w-min max-w-sm "
+          className="h-full mb-36 lg:mb-36 flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 lg:grid-flow-row-dense border-white max-w-7xl"
         >
-          <div className="md:mt-5 min-w-min w-96">
+          <div className="min-w-min w-96">
             <Card
               imageUrl={"/preview_map.png"}
               imageAlt={"Shuttr - A Photo Location Discovery Application"}
@@ -40,7 +41,7 @@ const Projects = () => {
               node={true}
             />
           </div>
-          <div className="md:mt-5 min-w-min w-96">
+          <div className="min-w-min w-96 mt-5 lg:mt-0">
             <Card
               imageUrl={"/maelys-home-wide.png"}
               imageAlt={"Maelys Portfolio"}
@@ -55,7 +56,7 @@ const Projects = () => {
               position={"bottom"}
             />
           </div>
-          <div className="md:mt-5 min-w-min w-96">
+          <div className="min-w-min w-96 mt-5 lg:mt-0">
             <Card
               imageUrl={"/sport-team.png"}
               imageAlt={"Sport Team"}
@@ -68,21 +69,7 @@ const Projects = () => {
               javascript={true}
             />
           </div>
-          <div className="md:mt-5 min-w-min w-96">
-            <Card
-              imageUrl={"/clockapp.png"}
-              imageAlt={"ClockApp"}
-              title={"Clock App"}
-              body={
-                "A mobile first Clock App complete with CSS animations and API calls. Built in Next.JS and with TailwindCSS"
-              }
-              link={"https://github.com/philsmithies/clockapp"}
-              react={true}
-              javascript={true}
-              position={"bottom"}
-            />
-          </div>
-          <div className="md:mt-5 min-w-min w-96">
+          <div className="min-w-min w-96 mt-5 lg:mt-0">
             <Card
               imageUrl="/gated-home-wide.png"
               imageAlt={"Gated Records"}
@@ -94,6 +81,20 @@ const Projects = () => {
               react={true}
               javascript={true}
               node={true}
+            />
+          </div>
+          <div className="min-w-min w-96 mt-5 lg:mt-0">
+            <Card
+              imageUrl={"/clockapp.png"}
+              imageAlt={"ClockApp"}
+              title={"Clock App"}
+              body={
+                "A mobile first Clock App complete with CSS animations and API calls. Built in Next.JS and with TailwindCSS"
+              }
+              link={"https://github.com/philsmithies/clockapp"}
+              react={true}
+              javascript={true}
+              position={"bottom"}
             />
           </div>
         </div>

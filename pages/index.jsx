@@ -29,27 +29,31 @@ const IndexPage = () => {
               <Intro />
               <About />
             </div>
-            <div className="flex flex-col md:flex-row mb-10 lg:ml-10 md:mt-40 max-w-screen-lg bg-red-400 self-start w-full">
-              <div className="flex flex-col pt-10 md:w-1/2 lg:mr-5 items-center  max-w-screen-lg">
-                <div
-                  data-aos="fade-down"
-                  data-aos-easing="linear"
-                  data-aos-duration="1000"
-                >
-                  <h2 className="text-5xl font-bold lg:mr-10 text-white">
-                    View my projects
-                  </h2>
-                  <p className="text-white ml-2 mb-10 md:mb-0">
-                    All of my projects can be seen{" "}
-                    <Link href="/projects" passHref>
-                      <span className="text-teal300">here</span>
-                    </Link>
-                  </p>
-                </div>
-                <div
-                  className="md:mt-10 min-w-min w-96 md:mr-4"
-                  data-aos="fade-in"
-                >
+            <div
+              id="projects"
+              className="flex flex-col mb-10 lg:ml-10 md:mt-40 max-w-screen-lg w-full items-center"
+            >
+              <div
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
+                <h2 className="text-5xl font-bold lg:mr-10 text-white mt-5">
+                  View my projects
+                </h2>
+                <p className="text-white ml-2 mb-10 md:mb-0">
+                  All of my projects can be seen{" "}
+                  <Link href="/projects" passHref>
+                    <span className="text-teal300">here</span>
+                  </Link>
+                </p>
+              </div>
+
+              <div
+                className="flex flex-col md:flex-row flex-wrap mx-auto justify-center"
+                data-aos="fade-in"
+              >
+                <div className="min-w-min w-96 mt-4 md:mr-4" data-aos="fade-in">
                   <Card
                     imageUrl="/gated-home-wide.png"
                     imageAlt={"Gated Records"}
@@ -63,12 +67,7 @@ const IndexPage = () => {
                     node={true}
                   />
                 </div>
-              </div>
-              <div
-                className="flex flex-col md:w-1/2 flex-grow-0 mx-auto"
-                data-aos="fade-in"
-              >
-                <div className=" min-w-min w-96 mt-4">
+                <div className="min-w-min w-96 mt-4">
                   <Card
                     imageUrl={"/preview_map.png"}
                     imageAlt={"Shuttr - A Photo Location Discovery Application"}
@@ -82,7 +81,7 @@ const IndexPage = () => {
                     node={true}
                   />
                 </div>
-                <div className="min-w-min w-96 mt-4">
+                <div className="min-w-min w-96 mt-4 md:mr-4">
                   <Card
                     imageUrl={"/maelys-home-wide.png"}
                     imageAlt={"Maelys Portfolio"}
@@ -97,9 +96,23 @@ const IndexPage = () => {
                     position={"bottom"}
                   />
                 </div>
+                <div className="min-w-min w-96 mt-4">
+                  <Card
+                    imageUrl={"/sport-team.png"}
+                    imageAlt={"Sport Team"}
+                    title={"Sport Team"}
+                    body={
+                      "Sport Team coaching interface, using Typescript, GraphQL and Next.js."
+                    }
+                    link={"https://github.com/philsmithies/sport-team/"}
+                    react={true}
+                    javascript={true}
+                  />
+                </div>
               </div>
             </div>
             <div
+              id="contact"
               data-aos="fade-in"
               data-aos-easing="linear"
               data-aos-duration="1000"

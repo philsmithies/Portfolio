@@ -16,7 +16,7 @@ const Intro = () => {
         <div
           data-aos="fade-down"
           data-aos-easing="linear"
-          data-aos-duration="1000"
+          data-aos-duration="800"
           data-aos-offset="0"
         >
           <h3 className="text-teal300 text-3xl md:text-4xl font-bold z-10">
@@ -34,7 +34,7 @@ const Intro = () => {
           data-aos-duration="1000"
           data-aos-offset="0"
         >
-          Full Stack Web Dev. 
+          Full Stack Web Dev.
         </h2>
         <div
           data-aos="fade-zoom-in"
