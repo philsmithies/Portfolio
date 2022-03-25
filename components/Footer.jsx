@@ -18,29 +18,6 @@ const Footer = () => {
             </button>
           </Link>
         </div>
-        <div className="flex">
-          <p className="text-white">
-            Built with{" "}
-            <Link className="text-teal300" href="https://nextjs.org/" passHref>
-              <p className="inline-block text-teal300 hover:text-teal600 cursor-pointer">
-                Next.JS
-              </p>
-            </Link>
-            <span> & </span>
-            <Link href="https://tailwindcss.com/" passHref>
-              <p className="inline-block text-teal300 hover:text-teal600 cursor-pointer">
-                TailwindCSS.
-              </p>
-            </Link>{" "}
-            Hosted on{" "}
-            <Link className="text-teal300" href="https://vercel.com/" passHref>
-              <p className="inline-block text-teal300 hover:text-teal600 cursor-pointer">
-                Vercel
-              </p>
-            </Link>
-            .
-          </p>
-        </div>
       </div>
     </div>
   );

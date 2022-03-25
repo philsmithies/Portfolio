@@ -12,16 +12,12 @@ const About = () => {
         </p>
         <br />
         <p className="text-white text-xl font-light">
-          I program multiple languages, and have just graduated from{" "}
-          <span className="text-teal300">Makers Academy</span> - a selective
-          full stack bootcamp. I&apos;m interested in building applications in
-          and not limited to <span className="text-teal300">React</span>,{" "}
-          <span className="text-teal300">Javascript</span>, Ruby, HTML, CSS.
-        </p>
-        <br />
-        <p className="text-white text-xl font-light">
-          Self certified pho expert and currently on a mission to perfect my own
-          recipe. 🍜
+          React is in everything and I specialise in using the JAMstack to
+          create quick, fluid and modern websites. I currently ♡ building
+          applications in and not limited to{" "}
+          <span className="text-teal300">Javascript</span>,{" "}
+          <span className="text-teal300">Typescript</span>,{" "}
+          <span className="text-teal300">React</span>, Ruby, HTML, CSS.
         </p>
       </div>
       <div className="mt-3 h-96 md:mt-0 max-w-1/2 sm:max-w-xs md:max-w-1/4 md:ml-5 ">

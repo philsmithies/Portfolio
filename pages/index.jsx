@@ -24,13 +24,13 @@ const IndexPage = () => {
               content="initial-scale=1.0, width=device-width"
             />
           </Head>
-          <div className=" md:mt-30 mb-15 max-w-7xl">
+          <div className="md:mt-30 mb-15 max-w-7xl flex flex-col justify-center items-center">
             <div className="md:ml-20">
               <Intro />
               <About />
             </div>
-            <div className="flex flex-col md:flex-row mb-10 lg:ml-10 items-center md:mt-40">
-              <div className="flex flex-col pt-10 md:w-1/2 lg:mr-5 items-center">
+            <div className="flex flex-col md:flex-row mb-10 lg:ml-10 md:mt-40 max-w-screen-lg bg-red-400 self-start w-full">
+              <div className="flex flex-col pt-10 md:w-1/2 lg:mr-5 items-center  max-w-screen-lg">
                 <div
                   data-aos="fade-down"
                   data-aos-easing="linear"
@@ -64,8 +64,11 @@ const IndexPage = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-col md:w-1/2" data-aos="fade-in">
-                <div className=" min-w-min w-96">
+              <div
+                className="flex flex-col md:w-1/2 flex-grow-0 mx-auto"
+                data-aos="fade-in"
+              >
+                <div className=" min-w-min w-96 mt-4">
                   <Card
                     imageUrl={"/preview_map.png"}
                     imageAlt={"Shuttr - A Photo Location Discovery Application"}
@@ -79,7 +82,7 @@ const IndexPage = () => {
                     node={true}
                   />
                 </div>
-                <div className="min-w-min w-96">
+                <div className="min-w-min w-96 mt-4">
                   <Card
                     imageUrl={"/maelys-home-wide.png"}
                     imageAlt={"Maelys Portfolio"}
@@ -100,7 +103,7 @@ const IndexPage = () => {
               data-aos="fade-in"
               data-aos-easing="linear"
               data-aos-duration="1000"
-              className="md:pt-32 md:mb-64"
+              className="md:pt-32 md:mb-32"
             >
               {" "}
               <Contact />

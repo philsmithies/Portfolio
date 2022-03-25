@@ -19,9 +19,9 @@ export default function Card({
   position = "top",
 }) {
   return (
-    <div className="border-grey border-2 rounded w-100 overflow-hidden mb-5 min-h-full">
+    <div className="border-grey border-2 rounded w-full overflow-hidden min-h-full">
       <Link href={link} passHref>
-        <div className="sm:h-46 md:h-56 w-full cursor-pointer">
+        <div className="sm:h-46 md:h-56 w-full cursor-pointer hover:opacity-80">
           <Image
             src={imageUrl}
             alt={imageAlt}
@@ -34,10 +34,14 @@ export default function Card({
         </div>
       </Link>
 
-      <div className="sm:mt-1 md:mt-4 lg:mt-8 p-3 lg:p-4">
+      <div className="mt-2 p-3 lg:p-4">
         <div className="font-bold text-white">
           <div className="flex mb-2 justify-between">
-            {title}
+            <Link href={link} passHref>
+              <p className="hover:text-teal300 font-bold cursor-pointer">
+                {title}
+              </p>
+            </Link>
             <div>
               <Link href={link} passHref>
                 <button className="ml-1 inline-flex items-center justify-center h-6 w-6 transition-colors duration-150 bg-gray-900 rounded-lg focus:shadow-outline hover:bg-teal600">
