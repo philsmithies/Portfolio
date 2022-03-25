@@ -42,25 +42,28 @@ const Projects = () => {
           </div>
           <div className="md:mt-5 min-w-min w-96">
             <Card
-              imageUrl="/chitter.png"
-              imageAlt={"Chitter - A Twitter Clone"}
-              title={"Chitter"}
-              body={"A Popular Social Media Clone built using the MERN Stack."}
-              link={"https://www.github.com/philsmithies/chitter-react"}
+              imageUrl={"/maelys-home-wide.png"}
+              imageAlt={"Maelys Portfolio"}
+              title={"Maëlys Chay - Illustration Portfolio"}
+              body={
+                "An illustrators portfolio built using Next.js & Typescript 🎨 Sanity.io Headless CMS. Tailwind CSS."
+              }
+              link={"https://github.com/philsmithies/maelys_portfolio"}
               react={true}
               javascript={true}
               node={true}
+              position={"bottom"}
             />
           </div>
           <div className="md:mt-5 min-w-min w-96">
             <Card
-              imageUrl={"/cv_generator.png"}
-              imageAlt={"CV Generator - A CV Generator in React"}
-              title={"CV Generator"}
+              imageUrl={"/sport-team.png"}
+              imageAlt={"Sport Team"}
+              title={"Sport Team"}
               body={
-                "A dynamic CV Generator written in React, written utilizing React Hooks"
+                "Sport Team coaching interface, using Typescript, GraphQL and Next.js."
               }
-              link={"https://github.com/philsmithies/cv-generator/"}
+              link={"https://github.com/philsmithies/sport-team/"}
               react={true}
               javascript={true}
             />
@@ -77,6 +80,20 @@ const Projects = () => {
               react={true}
               javascript={true}
               position={"bottom"}
+            />
+          </div>
+          <div className="md:mt-5 min-w-min w-96">
+            <Card
+              imageUrl="/gated-home-wide.png"
+              imageAlt={"Gated Records"}
+              title={"Gated Records"}
+              body={
+                "Gated Records - Record Label E-Commerce built using Typescript and Next.js"
+              }
+              link={"https://github.com/philsmithies/gated-recs-next-js"}
+              react={true}
+              javascript={true}
+              node={true}
             />
           </div>
         </div>
